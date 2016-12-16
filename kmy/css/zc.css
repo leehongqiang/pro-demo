@@ -1,0 +1,109 @@
+.zc_list_1 .list_a{font-size: 47px;text-align: center;line-height: 79px;}
+.zc_list_1 .list_b{text-align: center;}
+.zc_list_1 .list_b img{border-radius: 125px;}
+.zc_list_1 .list_c{font-size: 34px;text-align: center;line-height: 79px;}
+.zc_list_1 .list_d{font-size: 34px;text-align: right;padding-right:17%;padding-top: 10%;}
+.zc_list_1 .list_e{font-size: 34px;text-align: right;padding-right:17%;}
+.zc_list_1 .list_f{font-size: 34px;text-align: left;padding-left:5%;padding-top:10%;}
+.zc_list_1 .list_g{font-size: 34px;text-align: left;padding-left:5%;}
+.zc_list_1 .list_h{position: absolute;right:-1px;top:19px;}
+
+.music_pic_a{position: absolute;right:15px;top:27px;z-index: 10}
+.music_pic{position: absolute;right:34px;top:43px;z-index: 10}
+
+.zc_list_2 li {text-align: center;width: 564px;height: 488px;line-height: 488px;margin: 77px auto;
+    -webkit-box-shadow:0 0 0 5px rgb(188, 227, 232);
+    -moz-box-shadow:0 0 0 5px rgb(188, 227, 232);
+    box-shadow: 0 0 0 5px rgb(188, 227, 232);
+    -webkit-border-radius: 30px;
+    -moz-border-radius: 30px;
+    border-radius: 30px;
+}
+.zc_list_3 .titles{color: yellow;font-size: 50px;font-weight: bold;text-align: center;line-height: 100px;background: #000;
+    width: 500px;height: 105px;margin: 5px auto;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;}
+.zc_list_3 .image_3{margin: 0 auto;width: 565px;}
+.zc_list_3 .image_3 img{
+    -webkit-border-radius: 100px;
+    -moz-border-radius: 100px;
+    border-radius: 100px;}
+.zc_list_3 .contexts{background: #524D4C;opacity: 0.7;width: 600px;margin: 30px  auto;}
+.zc_list_3 .contexts p{color:#fff ;font-size: 30px;padding-left: 5%;padding-right: 5%;line-height: 150%;position: relative;z-index: 11}
+
+.zc_list_4 .context_last p{line-height:80px}
+.zc_list_4 .context_first p{line-height:80px;}
+.zc_list_4 .context_first .p1{color: yellow;font-size: 50px}
+.zc_list_4 .contexts_1{width:560px;background: #000;height: 150px;opacity: 0.5;margin:22px auto;border: 1px solid #fff;text-align: center;line-height: 150px;
+    -webkit-border-radius: 75px;
+    -moz-border-radius: 75px;
+    border-radius: 75px;}
+.zc_list_4 .contexts_1 p{color: #fff;font-size: 34px;}
+
+.zc_list_5 .list_5{text-align:center;line-height:418px;border:10px solid #fff;margin-top: 75px;}
+.zc_list_5 li p{font-size: 40px;line-height: 100px;padding-left: 40px;}
+
+.zc_list_6 li p{color: yellow;font-size: 46px;text-align: center;line-height: 185px;}
+.zc_list_6 .li_img{text-align: center;padding-top: 50px;}
+.zc_list_6 .li_first{border-bottom: 2px solid #fff}
+.zc_list_6 .li_last p{color: #fff;font-size: 26px;text-align:left;line-height: 59px;padding-left: 86px;padding-right: 88px;padding-top: 76px;}
+
+.zc_list_7 li{ color: #fff;font-size: 66px;text-align: left;line-height: 75px;background: #000;width:626px;height:260px; margin: 31px auto;opacity: 0.5;}
+.zc_list_7 li p{padding-top:26px;padding-left: 24px;}
+
+.zc_list_8 li{line-height: 62px;text-align: center;font-size: 33px;}
+.zc_list_8 .list_8 p{color: yellow;padding-top: 70px;font-size: 48px;}
+
+.zc_list_9 .list_9_first{width: 450px;height: 450px;border:3px dashed rgb(255, 255, 255);margin: 0 auto;
+    -webkit-border-radius: 250px;
+    -moz-border-radius: 250px;
+    border-radius: 250px;}
+.zc_list_9 .list_9_last{line-height: 40px;text-align: center;font-size: 25px;position: absolute;left: 6px;top: 35px;}
+.zc_list_9 .list_9_last .last_first{color: yellow}
+
+.zc_list_11 li{font-size: 48px;text-align: center;color: yellow}
+
+.zc_list_12 li{text-align: center}
+.zc_list_12 .title_12{text-align: left;padding-top: 55px;padding-left: 32px;}
+.zc_list_12 .title_12 p{font-size: 48px;}
+.zc_list_12 .list_con{font-size:24px;width:566px;height:50px;background:#fff;color:#000;margin:20px auto;text-align:left;padding-left:10px;line-height: 50px}
+.zc_list_12 .addrs{background: none;border: 1px dashed #fff;color: #fff;width:565px;height:151px;margin-top: 27px;line-height: 50px;}
+
+.zc_list_9 .list_13_list{padding-left: 50px;line-height: 50px;}
+.zc_list_9 .list_13_list .list13_first{color: #1E92F6}
+
+.zc_list_15 li{text-align: center;padding-top: 50px;}
+.zc_list_15 li p {color:#A39A9A;font-size: 38px;text-align: center;margin: 0 auto;  margin-top: 177px;width: 531px;height: 106px;border-bottom: 2px solid #A39A9A}
+.zc_list_15 .list_last_15 p{font-size: 28px;color: #1E92F6;margin-top: 120px;border-bottom: none}
+.p_con{color: rgb(197, 77, 77);font-size: 36px;text-align: center;line-height: 79px;font-weight: bold;bottom:4%;left:10%;position: absolute}
+.addRolling{
+    -o-animation:Rolling 1s infinite linear;
+    -ms-animation:Rolling 1s infinite linear;
+    -webkit-animation: Rolling 1s infinite linear;
+    -moz-animation: Rolling 1s infinite linear;
+    animation: Rolling 1s infinite linear}
+/*opera*/
+@-o-keyframes Rolling {
+    0%{-o-transform: rotate(0deg);}
+    100%{-o-transform: rotate(360deg);}
+}
+/*ie9*/
+@-ms-keyframes Rolling {
+    0%{-ms-transform: rotate(0deg);}
+    100%{-ms-transform: rotate(360deg);}
+}
+/*chrome safari*/
+@-webkit-keyframes Rolling {
+    0%{-webkit-transform: rotate(0deg);}
+    100%{-webkit-transform: rotate(360deg);}
+}
+/*firefox*/
+@-moz-keyframes Rolling {
+    0%{-moz-transform:rotate(0deg)}
+    100%{-moz-transform: rotate(360deg)}
+}
+@keyframes Rolling {
+    0%{transform:rotate(0deg) }
+    100%{transform:rotate(360deg)}
+}

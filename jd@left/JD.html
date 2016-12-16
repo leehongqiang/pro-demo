@@ -1,0 +1,92 @@
+<!doctype html>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<title>JD 分类导航</title>
+		<meta name="Keywords" content="关键词">
+		<meta name="description" content="">
+		<style type="text/css" >
+			*{margin:0px;padding:0px;}
+			body{height:2000px;}
+			.JD_nav_info ul{width:210px; height:494px;border:1px solid #C81623;margin-left:50px;margin-top:100px;list-style:none;}
+			.JD_nav_info ul li{width:210px; height:30px;background:#C81623;position:relative;}
+			.JD_nav_info ul span{width:191px;line-height:24px;padding:10px;color:#fff;font-size:14px;font-weight:bold;background:#B1191A;display:block;}
+			.JD_nav_info ul li a{text-decoration:none;width:210px;line-height:30px;padding:10px;color:#fff;font-size:14px;font-weight:bold;}
+			.JD_nav_info ul li a:after{content:">";color:#fff;right:-2px;width:18px;height:30px;position:absolute;z-index:2;}
+			.JD_nav_info ul li:hover{background:#fff;}
+			.JD_nav_info ul li:hover a{color:red;}
+			.JD_nav_info ul li:hover a:after{color:#fff;border-right:5px solid #fff;width:14px;z-index:1;position:absolute}
+			.JD_nav_info .nav_show{width:981px;height:488px;margin-left:210px;margin-top:-75px;display:none;border:1px solid #C81623;}
+		</style>	
+	</head>
+<body>
+	<div class="JD_nav_info">
+		<ul>
+			<span>全部商品分类</span>
+			<li><a href="#">家用电器</a>
+				<div class="nav_show"><img src="images/menu.png" alt="" width="981" height="488"></div>
+			</li>
+			<li><a href="#">手机、数码、手机通信</a>
+				<div class="nav_show"><img src="images/menu.png" alt="" width="981" height="488"></div>
+			</li>
+			<li><a href="#">电脑、办公</a>
+				<div class="nav_show"><img src="images/menu.png" alt="" width="981" height="488"></div>
+			</li>
+			<li><a href="#">家居、家具、家装、厨具</a>
+				<div class="nav_show"><img src="images/menu.png" alt="" width="981" height="488"></div>
+			</li>
+			<li><a href="#">男装、女装、内衣、珠宝</a>
+				<div class="nav_show"><img src="images/menu.png" alt="" width="981" height="488"></div>
+			</li>
+			<li><a href="#">个护化妆</a>
+				<div class="nav_show"><img src="images/menu.png" alt="" width="981" height="488"></div>
+			</li>
+			<li><a href="#">鞋靴、箱包、钟表、奢侈品</a>
+				<div class="nav_show"><img src="images/menu.png" alt="" width="981" height="488"></div>
+			</li>
+			<li><a href="#">运动户外</a>
+				<div class="nav_show"><img src="images/menu.png" alt="" width="981" height="488"></div>
+			</li>
+			<li><a href="#">汽车、汽车用品</a>
+				<div class="nav_show"><img src="images/menu.png" alt="" width="981" height="488"></div>
+			</li>
+			<li><a href="#">母婴、玩具乐器</a>
+				<div class="nav_show"><img src="images/menu.png" alt="" width="981" height="488"></div>
+			</li>
+			<li><a href="#">食品饮料、酒类、生鲜</a>
+				<div class="nav_show"><img src="images/menu.png" alt="" width="981" height="488"></div>
+			</li>
+			<li><a href="#">营养保健</a>
+				<div class="nav_show"><img src="images/menu.png" alt="" width="981" height="488"></div>
+			</li>
+			<li><a href="#">图书、音像、数字商品</a>
+				<div class="nav_show"><img src="images/menu.png" alt="" width="981" height="488"></div>
+			</li>
+			<li><a href="#">彩票、旅行、充值、票务</a>
+				<div class="nav_show"><img src="images/menu.png" alt="" width="981" height="488"></div>
+			</li>
+			<li><a href="#">理财、众筹、白条、保险</a>
+				<div class="nav_show"><img src="images/menu.png" alt="" width="981" height="488"></div>
+			</li>
+			
+		</ul>
+	</div>
+	<script type="text/javascript" src="js/jquery-1.11.1.min.js"></script>
+	<script type="text/javascript">
+		$(function(){
+		
+			$(".JD_nav_info ul li").mouseover(function(){
+				var _this = $(this).index()-1;
+				$(".JD_nav_info ul li .nav_show").eq(_this).css("display","block");
+				
+			});
+			$(".JD_nav_info ul li").mouseout(function(){
+				var _this = $(this).index()-1;
+				$(".JD_nav_info ul li .nav_show").eq(_this).css("display","none");
+	
+			});
+		});
+	
+	</script>
+</body>
+</html>

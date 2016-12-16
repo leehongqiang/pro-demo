@@ -1,0 +1,130 @@
+<!doctype html>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<title>LOFTER仿制</title>
+		<meta name="Keywords" content="关键词">
+		<meta name="description" content="">
+		<style type="text/css" >
+			*{margin:0px;padding:0px;}
+			/*设置header背景*/
+			.header{width:100%;height:900px;background:url(images/bj.jpg) no-repeat;/*背景图片等比例缩放*/background-size:cover;/*不加会导致内部margin无法使用*/overflow:hidden}
+			.header .logo{width:425px;height:124px;background:url(images/btn.png) no-repeat -3px -3px;margin:0 auto 60px;margin-top:160px;}
+			/*选项卡*/
+			.header .login{width:585px;height:265px;margin:0 auto;position:relative;  box-shadow: -5px -5px 13px rgb(142, 146, 184);}
+			.header .login .nav{box-shadow:2px 7px 13px rgb(14, 16, 34);}
+			.header .login ul .login_t{list-style:none;width:193px;height:56px;text-align:center;background:#111;filter:alpha(Opacity=50);-moz-opacity:0.5;opacity: 0.5;color:#fff;font-size:22px;cursor: pointer;float:left;border-left:2px solid #000}
+			.header .login ul .fist{border-left:none;width:195px;border-top-left-radius:3px;}
+			.header .login ul .three{border-top-right-radius:3px;}
+			.header .login ul .fist span{padding-left: 35px;}
+			.header .login ul .login_t span{line-height:56px;}
+			.header .login ul .login_t div{font-size:11px;width:50px;height:30px;line-height:15px;float:right;border-left:1px solid #fff;margin-top:13px;margin-right:30px;padding:0 10px;}
+			.header .login ul .login_t i{width:26px;height:26px;background:url(images/btn.png) no-repeat -162px -282px;display:block;float:right;position: absolute;top: 15px;left: 164px;}
+			/*.header .login ul .login_t:hover{background:#fff;filter:alpha(Opacity=100);-moz-opacity:1;opacity:1;border:none;width:195px;}*/
+			.header .login ul .login_t:hover i{background:url(images/btn.png) no-repeat -475px -823px;position:absolute;top: 15px;left: 164px;}
+			
+			.header .login ul .login_t:hover span{color:#6C6C6C;}
+			.header .login ul .login_t:hover div{color:#8B8B8B;border-left:1px solid #B4B4B4;}
+			.clear{clear:both;}
+			/*info*/
+			.header .login .reg_info{width:585px;height:210px;background:#fff;overflow:hidden;position:relative;display:none;box-shadow:2px 7px 13px rgb(14,16,34);border-bottom-left-radius:3px;border-bottom-right-radius:3px;}
+			.header .login .reg_info .left{float:left}
+			.header .login .reg_info .left .checkbox{height:16px;display:inline-block;width:16px;  margin-top: 9px;}
+			.header .login .reg_info .left label span{font-size:12px;display:block;position:absolute;left:52px;top:182px;color:#777;cursor: pointer;}
+			.header .login .reg_info .left .wjmm{font-size:12px;display:block;position:absolute;left:284px;top:182px;color:#777;cursor: pointer;}
+			.header .login .reg_info .left input{display:block;width:278px;height:40px;margin-left:30px;border:1px solid #dfdfdf;line-height:40px;}
+			.header .login .reg_info .left input:focus{outline:none;}
+			.header .login .reg_info .left .ps{padding-left:20px;}
+			.header .login .reg_info .left .user{margin-top:35px;border-bottom:none;}
+			.header .login .reg_info .left .zc{margin-top:15px;width:302px;cursor: pointer;background:#8DB800}
+			.header .login .reg_info .left .zc:hover{background:#AED505}
+
+			.header .login .reg_info .right{float:right;width:194px;height:150px;margin-top:35px;margin-right:30px;position:relative;}
+			.header .login .reg_info .right span{color:#aaa;display:block;position:absolute;left:-8px;top:53px;}
+			.header .login .reg_info .right .reg_or{border-left:1px solid #dfdfdf;width:150px;}
+			.header .login .reg_info .right ul li{width:112px;height:40px;display:block;margin-bottom:10px;color:#fff;line-height:40px;padding-left:50px;font-weight:bold;font-size:16px;cursor: pointer;margin-left: 30px;}
+			.header .login .reg_info .right ul .one{background: url(images/btn.png) no-repeat -1px -601px;}
+			.header .login .reg_info .right ul .two{background: url(images/btn.png) no-repeat -1px -651px;}
+			.header .login .reg_info .right ul .three{background: url(images/btn.png) no-repeat -213px -1191px;}
+			.header .login .reg_info .right ul .one:hover{background-position:-199px -601px;}
+			.header .login .reg_info .right ul .two:hover{background-position:-199px -651px;}
+			.header .login .reg_info .right ul .three:hover{background-position:-213px -1251px;}
+			.header .login .sel{display:block;}
+			.header .login ul .sels{background:#fff;color:#3D3D3D;opacity:1;}
+			.header .login ul li .issong{background:url(images/btn.png) no-repeat -475px -823px;position:absolute;top: 15px;left: 164px;}
+			.header .login ul li .isdiv{border-left:1px solid #B4B4B4;}
+			.header .login .appdown{background:url(images/xz.jpg) no-repeat;cursor: pointer;}
+		</style>	
+	</head>
+<body>
+	<div class="header">
+		<div class="logo"></div>
+		<div class="login">
+			<ul class="nav">
+				<li class="fist login_t sels">
+					<span>注册</span>
+					<div class="isdiv">20张照片在线冲印</div>
+					<i class="issong"></i>	
+				</li>
+				<li class="login_t">
+					<span>登陆</span>
+				</li>
+				<li class="three login_t">
+					<span>下载APP</span>
+				</li>
+				<div class="clear">
+			</ul>
+			<!--zhuce-->
+			<div class="reg_info sel">
+				<div class="left">
+					<input class="user ps"type="text" placeholder="常用邮箱 / 网易邮箱"></input>
+					<input class="pw ps" type="text" placeholder="设置密码"></input>
+					<input class="zc"type="button" value="注册"></input>
+				</div>
+				<div class="right">
+					<span>或</span>
+				   <ul class="reg_or">
+						<li class="hovers one">新浪微博注册</li>
+						<li class="hovers two">腾讯QQ注册</li>
+						<li class="hovers three">微信注册</li>
+				   </ul>
+				</div>
+			</div>
+			<!--denglu-->
+			<div class="reg_info">
+				<div class="left">
+					<input class="user ps"type="text" placeholder="常用邮箱 / 网易邮箱"></input>
+					<input class="pw ps" type="text" placeholder="设置密码"></input>
+					<input class="zc"type="button" value="登陆"></input>
+					<label><input class="checkbox" type="checkbox" value="记住密码"/><span>记住密码</span></label>
+					<span class="wjmm">忘记密码</span>
+				</div>
+				<div class="right">
+					<span>或</span>
+				   <ul class="reg_or">
+						<li class="hovers one">新浪微博登陆</li>
+						<li class="hovers two">腾讯QQ登陆</li>
+						<li class="hovers three">微信登陆</li>
+				   </ul>
+				</div>
+			</div>
+			<!--xiazai-->
+			<div class="reg_info appdown">
+				
+			</div>
+		</div>
+	</div>
+<script type="text/javascript" src="js/jquery.js"></script>
+<script type="text/javascript" >
+	$(function(){
+		$(".login_t").click(function(){
+			var _index=$(this).index();
+			$(this).addClass("sels").siblings().removeClass("sels");
+			$(".header .login .reg_info").eq(_index).addClass("sel").siblings().removeClass("sel");
+		});
+	
+	});
+
+</script>
+</body>
+</html>

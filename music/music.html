@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>MUSIC DEMO</title>
+    <link rel="stylesheet" href="css/animate.css"/>
+    <link rel="stylesheet" href="css/common.css"/>
+    <style>
+        /*<!--背景设置-->*/
+        .bj{background: url("images/bg.jpg") fixed center 0;
+            width:100%;
+            height:100%;
+            position:absolute;
+            top:0;
+            left:0;
+            -webkit-background-size: cover;
+            -o-background-size: cover;
+            background-size: cover;
+            z-index:-10;
+            zoom:1}
+        /*背景设置end*/
+        /*TOP list 布局*/
+
+        .music{width:960px;height:250px;background: url("images/banner_bg.jpg") no-repeat;margin:50px auto;
+            position: relative;}
+        .music .music_list img{border-radius: 30px;position: absolute;left: 188px;top: 14px;
+            background: red;  width: 60px;  height: 60px; display: block; }
+        .music .music_list1 img{border-radius: 30px;position: absolute;left: 6px;top: 30px;  }
+        .music .music_list2 img{border-radius: 45px;position: absolute;left: 76px;top: 123px;  }
+        .music .music_list3 img{border-radius: 30px;position: absolute;left: 190px;bottom: 10px;  }
+        .music .music_list4 img{border-radius: 30px;position: absolute;left: 286px;top: 4px;  }
+        .music .music_list5 img{border-radius: 62px;position: absolute;left:308px;top: 64px;  }
+        .music .music_list6 img{border-radius: 30px;position: absolute;left: 400px;top: 178px;  }
+        .music .music_list7 img{border-radius: 45px;position: absolute;left: 482px;top: 30px;  }
+        .music .music_list8 img{border-radius: 30px;position: absolute;right: 325px;bottom:20px;  }
+        .music .photo{width: 150px;height: 150px;position: absolute;right: 35px;top: 30px;text-align: center}
+        .music .photo img{border-radius: 75px;}
+        .music .photo span{color: #fff;font-size: 16px;}
+        .music .addRolling{
+            -o-animation:Rolling 3s infinite linear;
+            -ms-animation:Rolling 3s infinite linear;
+            -webkit-animation: Rolling 3s infinite linear;
+            -moz-animation: Rolling 3s infinite linear;
+            animation: Rolling 3s infinite linear}
+        /*opera*/
+        @-o-keyframes Rolling {
+            0%{-o-transform: rotate(0deg);}
+            100%{-o-transform: rotate(360deg);}
+        }
+        /*ie9*/
+        @-ms-keyframes Rolling {
+            0%{-ms-transform: rotate(0deg);}
+            100%{-ms-transform: rotate(360deg);}
+        }
+        /*chrome safari*/
+        @-webkit-keyframes Rolling {
+            0%{-webkit-transform: rotate(0deg);}
+            100%{-webkit-transform: rotate(360deg);}
+        }
+        /*firefox*/
+        @-moz-keyframes Rolling {
+            0%{-moz-transform:rotate(0deg)}
+            100%{-moz-transform: rotate(360deg)}
+        }
+        @keyframes Rolling {
+            0%{transform:rotate(0deg) }
+            100%{transform:rotate(360deg)}
+        }
+        /*TOP LIST 布局 END*/
+        /*player start*/
+        .music_player{width:541px;height:115px;background: #000;position: fixed;left: 0;top:500px;line-height: 115px;font-size: 20px;}
+        .music_player img{float: left;margin-top: 14px;margin-right:10px }
+        .music_player .music_name{color:#fff;width:238px;float: left}
+        .music_player .music_btn{width:180px;height: 52px;float: left;margin-top: 30px;}
+        .music_player .music_btn .btn_pre{background: url("images/player_bg.png" ) no-repeat -69px 2px ;display: block;
+            width: 36px;height: 28px;margin-top: 12px;float: left;margin-right:20px;}
+			.music_player .music_btn .btn_pre:hover{background-position:-69px -30px}
+        .music_player .music_btn .btn_play{background: url("images/player_bg.png" ) no-repeat -106px 0 ;display: block;
+            width: 35px;height: 38px;margin-top: 6px;float: left;margin-right:20px;}
+			.music_player .music_btn .btn_play:hover{background-position:-106px -42px}
+        .music_player .music_btn .btn_stop{background: url("images/player_bg.png" ) no-repeat -290px  -88px ;display: none;
+            width: 35px;height: 38px;margin-top: 6px;float: left;margin-right:20px;}
+			.music_player .music_btn .btn_stop:hover{background-position:-332px -88px}
+        .music_player .music_btn .btn_next{background: url("images/player_bg.png" ) no-repeat -140px 0 ;display: block;
+            width: 36px;height: 28px;margin-top: 12px;float: left;margin-right:20px;}
+			.music_player .music_btn .btn_next:hover{background-position:-140px -32px}
+        .music_player .music_backup{width:22px;height: 115px;background: url("images/player_bg.png") no-repeat 0 0;float: right;cursor: pointer}
+        .music_player .music_packdown{background-position:-46px 0px;}
+        .music_player .music_packme{background-position:-23px 0px;}
+    </style>
+</head>
+<body>
+    <div class="bj"></div>
+    <div class="music">
+        <div class="music_list1">
+            <a href="javascript:" class="items" title="If I Die Young" data-url="mp3/IfIDieYoung.mp3">
+                <img src="images/1.jpg" alt="齐晨" width="60" height="60">
+            </a>
+        </div>
+        <div class="music_list2">
+            <a href="javascript:" class="items" title="海阔天空" data-url="mp3/海阔天空.mp3">
+                <img src="images/2.jpg" alt="Beyond" width="90" height="90">
+            </a>
+        </div>
+        <div class="music_list">
+            <a href="javascript:" class="items" title="红日" data-url="mp3/红日.mp3">
+                <img src="images/2.jpg" alt="李克勤" width="90" height="90">
+            </a>
+        </div>
+        <div class="music_list3">
+            <a href="javascript:" class="items" title="Immortals" data-url="mp3/Immortals.mp3">
+                <img src="images/3.jpg" alt="Fall Out Boy" width="60" height="60">
+            </a>
+        </div>
+        <div class="music_list4">
+            <a href="javascript:" class="items" title="你在就好" data-url="mp3/你在就好.mp3">
+                <img src="images/4.jpg" alt="崔子格" width="60" height="60">
+            </a>
+        </div>
+        <div class="music_list5">
+            <a href="javascript:" class="items" title="Sugar" data-url="mp3/Sugar.mp3">
+                <img src="images/5.jpg" alt="Maroon 5" width="124" height="124">
+            </a>
+        </div>
+        <div class="music_list6">
+            <a href="javascript:" class="items" title="时间都去哪儿了" data-url="mp3/时间都去哪儿了.mp3">
+                <img src="images/6.jpg" alt="方大同" width="60" height="60">
+            </a>
+        </div>
+        <div class="music_list7">
+            <a href="javascript:" class="items" title="Two More Lonely People" data-url="mp3/TwoMoreLonelyPeople.mp3">
+                <img src="images/7.jpg" alt="Miley Cyrus" width="90" height="90">
+            </a>
+        </div>
+        <div class="music_list8">
+            <a href="javascript:" class="items" title="SeeYouAgain" data-url="mp3/SeeYouAgain.mp3">
+                <img src="images/8.jpg" alt="Wiz" width="60" height="60">
+            </a>
+        </div>
+        <div class="photo">
+            <img src="images/9.jpg" width="150" height="150">
+            <span>我是一只小小鸟</span>
+        </div>
+    </div>
+    <div class="music_player">
+        <div class="music_pic">
+            <img src="images/1.jpg" alt="方大同" width="90" height="90">
+            <p class="music_name">"If I Die Young"</p>
+        </div>
+        <div class="music_btn">
+            <a href="javascript:" id="btn_pre" class="btn_pre"></a>
+            <a href="javascript:" id="btn_play" class="btn_play"></a>
+            <a href="javascript:" id="btn_stop" class="btn_stop"></a>
+            <a href="javascript:" id="btn_next" class="btn_next"></a>
+        </div>
+        <div id="music_backup" class="music_backup" ></div>
+    </div>
+    <div id="audiobox"><audio src="mp3/IfIDieYoung.mp3"></audio></div>
+    <script src="js/jquery-1.11.1.min.js" type="text/javascript"></script>
+    <script type="text/javascript">
+        $(function(){
+            //创建播放器
+           var _index = 0;
+            function createMP3(src){
+                var audioDom = document.createElement("audio");
+                audioDom.src = src;
+                document.getElementById("audiobox").innerHTML = "";
+                document.getElementById("audiobox").appendChild(audioDom);
+                return audioDom;
+            }
+            var audioDom = createMP3("mp3/IfIDieYoung.mp3");
+           //audioDom.play();
+            //上一首
+            $("#btn_pre").click(function(){
+                _index--;
+                $(".items").eq(_index).trigger("click");
+            });
+            // 下一首
+            $("#btn_next").click(function(){
+                _index++;
+                $(".items").eq(_index).trigger("click");
+            });
+             //播放
+            $("#btn_play").click(function(){
+                $(this).hide();
+                $("#btn_stop").show();
+                audioDom.play();
+            });
+            //暂停
+            $("#btn_stop").click(function(){
+                $(this).hide();
+                $("#btn_play").show();
+                audioDom.pause();
+            });
+            //收缩播放器
+            $("#music_backup").click(function(){
+                var width = $(".music_player").width() - 22;
+                var left = $(".music_player").offset().left;
+                var n = 1;
+                if (left < 0){
+                    n = 0;
+                    $(this).removeClass("music_packdown").addClass("music_packme");
+                }
+                $(".music_player").animate({left:-width*n},500,function(){
+                    if(n == 0){
+                        $(this).find(".music_backup").removeClass("music_packdown").removeClass("music_packme");
+                    }else{
+                        $(this).find(".music_backup").addClass("music_packdown");
+                    }
+
+                });
+
+
+            });
+            //图片联动播放
+            $(".items").click(function(){
+                var url = $(this).data("url");
+                var title = $(this).attr("title");
+                //同步
+                var imgsrc = $(this).find("img").attr("src");
+                //alert(imgsrc)
+                $(".music_pic").find("img").attr("src",imgsrc);
+                $(".music_pic").find("p").text(title);
+                //重新触发播放器按钮
+                audioDom = createMP3(url);
+                //模拟触发播放器按钮
+                $("#btn_play").trigger("click");
+                //添加动画效果
+                $(".items").find("img").removeClass("addRolling");
+                $(this).find("img").addClass("addRolling");
+            });
+        });
+    </script>
+</body>
+</html>

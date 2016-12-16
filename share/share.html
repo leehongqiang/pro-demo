@@ -1,0 +1,53 @@
+<!doctype html>
+<html>
+	<head>
+		<!--声明当前页面的编码集-->
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<!--当前页面三要素-->
+		<title>Welcome to HTML</title>
+		<meta name="Keywords" content="关键词">
+		<meta name="description" content="">
+		<style type="text/css" >
+			*{margin:0px;padding:0px;}
+			body{background:#609;}
+			.share_info{width:142px;height:200px;margin:200px auto;}
+			.share_info a{display:block;width:35px; height:35px;float:left;margin:60px 5px;position:relative;overflow: hidden;border-radius:5px;}
+			
+			.share_info a span{display:block;;width:30px; height:74px;background:url("images/share.png");margin-top:5px;position:absolute;}
+			
+			.share_info .share_sina{background-position:0 1px;}
+			.share_info .share_tx{background-position:-43px 1px;}
+			.share_info .share_qq{background-position:33px 1px;}
+
+		</style>	
+	</head>
+<body>
+	
+	<div class="share_info">
+		<a href="#" id="a"><span class="share_sina"></span></a>
+		<a href="#" id="a"><span class="share_tx"></span></a>
+		<a href="#" id="a"><span class="share_qq"></span></a>
+	</div>
+<script type="text/javascript" src="js/jquery-1.11.1.min.js"></script>
+<script type="text/javascript">
+	
+	$("a").mouseover(function(){
+		$(this).children().stop();
+		$(this).children().animate({
+			top:'-46px'
+		},500);
+		$(this).css("background-color","#FF4646");
+	});
+	$("a").mouseleave(function(){
+		$(this).children().stop();
+		$(this).children().animate({
+			top:'0px',
+		},500);
+		$(this).css("background","none");
+	});
+
+</script>
+
+</body>
+</html>
+

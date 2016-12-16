@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>饿了么-网上订餐</title>
+    <link rel="stylesheet" href="css/common.css"/>
+    <link rel="stylesheet" href="css/animate.css"/>
+    <style>
+        body{background: url("images/bj.jpg") no-repeat #f4f4f4;background-size:cover}
+        .ele{width:960px;height:800px;margin: 50px auto;}
+        .ele .ele_title {width:100%;height: 48px;line-height: 48px;background: #3397E4;text-align: center;font-size:18px;
+            color:#fff}
+        .ele .ele_map{width: 100%;height: 100%;position: relative}
+        .ele .ele_map .ele_lbs{width:568px;height: 50px;position: absolute;
+            top:10px;left: 70px;z-index: 1;background: #fff;}
+        .ele .ele_map .ele_lbs .ele_city{width:450px;height:50px;box-shadow: 0 0 10px #ccc;padding-left:10px}
+        .ele .ele_map .ele_lbs .ele_search{width:99px;height:50px;box-shadow: 0 0 10px #ccc;background: #3397E4;cursor: pointer}
+        .ele .ele_map .ele_rbtn{background:#fff;box-shadow: 0 0 10px #29ffd5;}
+        .ele .ele_map .ele_rbtn ul li{width:100px;height: 50px;line-height: 50px;text-align: center;border-bottom: 1px dashed #c0c0c0;
+        cursor: pointer}
+        .ele .ele_map .ele_rbtn ul li:last-child{border-bottom: none}
+        .ele .ele_map .ele_rbtn ul li:hover{background: #ccc}
+    </style>
+</head>
+<body>
+    <div class="ele">
+
+        <div class="ele_title">
+            <p>叫外卖上饿了么</p>
+        </div>
+        <div class="ele_map" id="ele_map">
+            <div class="ele_lbs">
+                <input type="text" class="ele_city" id="ele_city" placeholder="请输入你的订餐地址（学校，写字楼或街道）">
+                <input type="button" class="ele_search" id="ele_search" value="点击搜索" >
+            </div>
+        </div>
+
+    </div>
+    <script type="text/javascript" src="js/jquery-1.11.1.min.js"></script>
+    <script type="text/javascript" src="http://webapi.amap.com/maps?v=1.3&key=ab24774a302ced38a5d921be6d0f3d75"></script>
+    <script type="text/javascript">
+
+        var map = new AMap.Map('ele_map', {
+            resizeEnable: true,
+            //设置地图显示的缩放级别
+            view: new AMap.View2D({
+                zoom: 12
+            })
+        });
+        //设置城市
+        document.getElementById('ele_search').onclick = function(){
+            var cityName = document.getElementById('ele_city').value;
+            if(!cityName){
+                cityName = '成都市';
+            }
+            map.setCity(cityName);
+        };
+        //地图中添加地图操作ToolBar插件、鼠标工具MouseTool插件
+        map.plugin(["AMap.ToolBar","AMap.MouseTool"], function(){
+            toolBar = new AMap.ToolBar();
+            map.addControl(toolBar);
+            mouseTool = new AMap.MouseTool(map);
+        });
+        //自定义右键菜单内容
+        var menuContent = document.createElement("div");
+        menuContent.innerHTML = "<div class='ele_rbtn'>"+
+            "		<ul>"+
+            "			<li onclick='zoomMenu(0)'>缩小</li>"+
+            "			<li onclick='zoomMenu(1)'>放大</li>"+
+            "			<li onclick='distanceMeasureMenu()'>测量尺寸</li>"+
+            "			<li onclick='addMarkerMenu()'>添加标记位置</li>"+
+            "		</ul>"+
+            "	</div>";
+        //创建右键菜单
+        contextMenu = new AMap.ContextMenu({isCustom:true,content:menuContent});//通过content自定义右键菜单内容
+
+        //地图绑定鼠标右击事件——弹出右键菜单
+        AMap.event.addListener(map, 'rightclick', function(e){
+            contextMenu.open(map, e.lnglat);
+            contextMenuPositon = e.lnglat; //右键菜单位置
+        });
+        contextMenu.close();
+        //右键菜单缩放地图
+        function zoomMenu(tag){
+            if(tag === 0){	map.zoomOut();}
+            if(tag === 1){	map.zoomIn();}
+            contextMenu.close();
+        }
+
+        //右键菜单距离量测
+        function distanceMeasureMenu(){
+            mouseTool.rule();
+            contextMenu.close();
+        }
+
+        //右键菜单添加Marker标记
+        function addMarkerMenu(){
+            mouseTool.close();
+            var marker = new AMap.Marker({
+                map: map,
+                position: contextMenuPositon, //基点位置
+                icon: "http://webapi.amap.com/images/marker_sprite.png", //marker图标，直接传递地址url
+                offset: {x:-8,y:-34} //相对于基点的位置
+            });
+            contextMenu.close();
+        }
+
+
+        $(function(){
+            $(".t_btn").click(function(){
+                var text = $(".t_text").val();
+                map.setCity(text);
+            });
+        });
+        //加载比例尺插件
+        map.plugin(["AMap.Scale"], function(){
+            scale = new AMap.Scale();
+            map.addControl(scale);
+        });
+        //添加地图类型切换插件
+        map.plugin(["AMap.MapType"],function(){
+            //地图类型切换
+            var mapType= new AMap.MapType({
+                defaultType:0,//1默认显示卫星图
+                showRoad:true //叠加路网图层
+            });
+            map.addControl(mapType);
+        });
+    </script>
+</body>
+</html>

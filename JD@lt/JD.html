@@ -1,0 +1,94 @@
+<!doctype html>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<title>JD 楼层滑动效果</title>
+		<meta name="Keywords" content="关键词">
+		<meta name="description" content="">
+		<style type="text/css" >
+			*{margin:0px;padding:0px;}
+			body{font-size:12px;font-family:"微软雅黑";}
+
+			.JD_nav_left .nav_left{line-height:29px;text-align:center;margin:200px 0px 0px 20px;position:fixed;}
+			.JD_info{margin:0px auto;width:1220px;}
+			.JD_info ul li{list-style:none}
+
+			/*
+			*solid 实线
+			*dotted 点
+			*dashed	虚线
+			*/
+			.JD_nav_left .nav_left li{list-style:none;width:30px;height:29px;cursor:pointer;}
+			.JD_nav_left .nav_left li .nav_lc{border-bottom:1px dotted #6E6E6E;text-decoration:none;width:18px;display:inline-block;color:#625351}
+			.JD_nav_left .nav_left li .last{border-bottom:none;}
+			.JD_nav_left .nav_left .nav_show{display:none;text-decoration:none;color:#fff;}
+			.JD_nav_left .nav_left li:hover{background:red;}
+			.JD_nav_left .nav_left li:hover .nav_lc{display:none;}
+			.JD_nav_left .nav_left li:hover .nav_show{display:block;}
+			/*难点li.sel是对应下面JS焦点上去添加的class并且《改变 a.nav_lc》*/
+			.JD_nav_left .nav_left li.sel a.nav_lc{display:none;}
+			/*难点li.sel是对应下面JS焦点上去添加的class并且《改变 a.nav_show》*/
+			.JD_nav_left .nav_left li.sel a.nav_show{display:inline-block;width:24px;color:red;}
+		</style>	
+	</head>
+<body>
+	<div class="JD_nav_left">
+		<ul class="nav_left">
+			<li><a href="#" class="nav_lc ">1F</a><a href="#" class="nav_show">服饰</a></li>
+			<li><a href="#" class="nav_lc">2F</a><a href="#" class="nav_show">美妆</a></li>
+			<li><a href="#" class="nav_lc">3F</a><a href="#" class="nav_show">手机</a></li>
+			<li><a href="#" class="nav_lc">4F</a><a href="#" class="nav_show">家电</a></li>
+			<li><a href="#" class="nav_lc">5F</a><a href="#" class="nav_show">数码</a></li>
+			<li><a href="#" class="nav_lc">6F</a><a href="#" class="nav_show">运动</a></li>
+			<li><a href="#" class="nav_lc">7F</a><a href="#" class="nav_show">居家</a></li>
+			<li><a href="#" class="nav_lc">8F</a><a href="#" class="nav_show">母婴</a></li>
+			<li><a href="#" class="nav_lc">9F</a><a href="#" class="nav_show">食品</a></li>
+			<li><a href="#" class="nav_lc">10F</a><a href="#" class="nav_show">图书</a></li>
+			<li><a href="#" class="nav_lc last">11F</a><a href="#" class="nav_show">服务</a></li>
+		</li>
+	</div>
+	<div class="JD_info">
+		<ul>
+			<li><img src="images/head.png"></li>
+			<li><img src="images/f1.png"></li>
+			<li><img src="images/f2.png"></li>
+			<li><img src="images/f3.png"></li>
+			<li><img src="images/f4.png"></li>
+			<li><img src="images/f5.png"></li>
+			<li><img src="images/f6.png"></li>
+			<li><img src="images/f7.png"></li>
+			<li><img src="images/f8.png"></li>
+			<li><img src="images/f9.png"></li>
+			<li><img src="images/f10.png"></li>
+			<li><img src="images/f11.png"></li>
+		</ul>
+	</div>
+	<script type="text/javascript" src="js/jquery-1.11.1.min.js"></script>
+	<script type="text/javascript">
+		$(function(){
+			var lc = $(".JD_info ul li");
+			var le = $(".JD_nav_left ul li");
+			$(".JD_nav_left ul li").click(function(){
+				var _index = $(this).index()+1;
+				$(document.body).animate({scrollTop:lc.eq(_index).offset().top},500);
+			});
+			$(window).scroll(function(){
+				// 滚动条距离顶部的距离
+				var wtop = $(this).scrollTop();
+				lc.each(function(){
+					var _this = $(this);
+					//  _this.height()当前楼层的高度
+					// _this.offset().top　当前楼层距离顶部的隐藏区域的高度
+					if(wtop < _this.offset().top + _this.height()+200){
+						//console.log("wtop:"+wtop+"====="+"_this.offset().top:"+_this.offset().top+"========"+"_this.height() :"+_this.height());
+						$(".JD_nav_left ul li").eq(_this.index()).addClass("sel").siblings().removeClass("sel");
+						return false;
+					}
+				});
+
+			});
+		});
+	
+	</script>
+</body>
+</html>

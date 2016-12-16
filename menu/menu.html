@@ -1,0 +1,110 @@
+<!doctype html>
+<html>
+	<head>
+		<!--声明当前页面的编码集-->
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<!--当前页面三要素-->
+		<title>Menu-lee</title>
+		<meta name="Keywords" content="关键词">
+		<meta name="description" content="">
+		<style type="text/css" >
+			*{margin:0px;padding:0px;}
+			body{background:url("images/bg.jpg") no-repeat;font-size:12px;font-family:"微软雅黑"}
+			.menu{width:200px;height:259px;background:#fff;box-shadow:1px 1px 40px #ccc;display:none;position:absolute;}
+			.menu ul li{width:195px;height:36px;border-bottom:1px solid #ddd;line-height:37px;padding-left:5px;list-style:none;color:#666;font-size:14px;}
+
+		</style>	
+	</head>
+<body>
+	
+	<div class="menu">
+		<ul>
+			<li onclick="clickmenu(1);">添加应用</li>
+			<li onclick="clickmenu(2);">获取课程</li>
+			<li>添加笔记</li>
+			<li>刷新</li>
+			<li>上传资料</li>
+			<li>更换背景</li>
+			<li>注销</li>
+		</ul>
+	</div>
+<script type="text/javascript" src="js/jquery-1.11.1.min.js"></script>
+<script type="text/javascript">
+	//禁用系统鼠标右键功能
+	document.oncontextmenu=function(){
+		return false;
+	}
+	//点击鼠标键
+	$(document).mousedown(function(e){
+		var key=e.which;
+		//alert(x);
+		//alert(y);
+		//alert(key);
+		if (key==3){
+// 获取menu的宽度和高度
+
+			var x = e.clientX; // x 横坐标
+			var y = e.clientY; // y 纵坐标
+			// $("#zb").html("x = " + x + "  ,  y = " + y); 显示坐标值
+
+			// 获取menu的宽度和高度
+			var menuHeight = $(".menu").height();
+			var menuWidth = $(".menu").width();
+			// 获取浏览器的可见高度和宽度
+			var clientHeight = getClientHeight();
+			var clientWidth = getClientWidth();
+			// 判断
+			if(menuHeight + y > clientHeight){
+				y = clientHeight - menuHeight - 5;
+			}
+			if(menuWidth + x > clientWidth){
+				x = clientWidth - menuWidth - 5;
+			}
+			//.menu需要绝对定位
+			$(".menu").show().css({"margin-left":x,"margin-top":y});
+			//$(".menu").show().css({left:x,top:y});
+		}
+	});
+	//鼠标选中li时背景加深
+	$(".menu").find("li").hover(function(){
+		$(this).css({"background":"#0F460F","color":"#fff"}).siblings().css({"background":"#fff","color":"#666"});
+	});
+	//点击空白窗口消失
+	$(document).click(function(){
+		$(".menu").hide();
+	});
+	//li相应功能
+	function clickmenu(i){
+		if(i == 1){
+			alert("添加应用");
+		}
+		else if(i == 2){
+			alert("获取课程");
+		}
+	}
+
+	// 浏览器的可见高度
+	function getClientHeight() {
+		var clientHeight = 0;
+		if (document.body.clientHeight && document.documentElement.clientHeight) {
+			clientHeight = (document.body.clientHeight < document.documentElement.clientHeight) ? document.body.clientHeight: document.documentElement.clientHeight;
+		} else {
+			clientHeight = (document.body.clientHeight > document.documentElement.clientHeight) ? document.body.clientHeight: document.documentElement.clientHeight;
+		}
+		return clientHeight;
+	}
+
+	// 浏览器的可见宽度
+	function getClientWidth() {
+		var clientWidth = 0;
+		if (document.body.clientWidth && document.documentElement.clientWidth) {
+			clientWidth = (document.body.clientWidth < document.documentElement.clientWidth) ? document.body.clientWidth: document.documentElement.clientWidth;
+		} else {
+			clientWidth = (document.body.clientWidth > document.documentElement.clientWidth) ? document.body.clientWidth: document.documentElement.clientWidth;
+		}
+		return clientWidth;
+	}
+
+</script>
+</body>
+</html>

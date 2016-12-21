@@ -1,0 +1,59 @@
+body,ul{
+  margin: 0;
+  padding: 0;
+}
+body{
+  height: 100%;
+}
+li{
+  list-style-type: none;
+}
+.img-small-flex,.img-list-flex{
+  display: flex;
+}
+.img-list-flex{
+  flex-direction: column;
+}
+.img-small-i{
+  width: 50px;
+  height: 50px
+}
+.hyhc-box{
+  position: relative;
+}
+.img-list{
+  position: absolute;
+  width: 100%;
+  left: 0;
+  top: 0;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  background: #000;
+  z-index: 100;
+}
+.img-list-i{
+  display: none;
+  -webkit-animation-name: fadeIn; /*动画名称*/
+  -webkit-animation-duration: 1s; /*动画持续时间*/
+  -webkit-animation-iteration-count: 1; /*动画次数*/
+  -webkit-animation-delay: 0s; /*延迟时间*/
+}
+.img-list-i span{
+  position: absolute;
+  display: block;
+  color: #fff;
+  top: 10px;
+  right: 10px;
+}
+@-webkit-keyframes fadeIn {
+  0% {
+    opacity: 0; /*初始状态 透明度为0*/
+  }
+  50% {
+    opacity: 0.5; /*中间状态 透明度为0*/
+  }
+  100% {
+    opacity: 1; /*结尾状态 透明度为1*/
+  }
+}

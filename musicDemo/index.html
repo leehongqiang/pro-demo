@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <style>
+  body,ul,li{
+      margin: 0;
+      padding: 0
+    }
+    .content{
+      width: 150px;
+      height: 50px;
+      margin: 50px auto;
+      position: relative
+    }
+    .content__body{
+      width: 150px;
+      height: 50px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      cursor: pointer
+    }
+    .content__item{
+      border-right: 2px solid red;
+      list-style: none
+    }
+    .content__item--1{
+      width: 10px;
+      height: 10px;
+      border-radius: 5px;
+        
+    }
+
+    .content__item--2{
+      width: 20px;
+      height: 20px;
+      border-radius: 10px;
+        
+    }
+    .content__item--3{
+      width: 30px;
+      height: 30px;
+      border-radius: 15px;
+    }
+    .content__mask{
+      position: absolute;
+      width: 15px;
+      height: 50px;
+      top:0;
+      left: 34px;
+      background:#fff;
+      
+    }
+    .content__mask--move{
+      animation: move 1s linear;
+      animation-iteration-count: infinite
+    }
+    .content__time{
+      position: absolute;
+      width: 30px;
+      height: 50px;
+      top:0;
+      left: 0;
+      line-height: 50px;
+    }
+    @keyframes move{
+      form{left: 0px}
+      to{left: 100px}
+    }
+  </style>
+</head>
+<body>
+  <div id="audiobox">
+    <audio src="./music/化鹤归.mp3"></audio>
+  </div>
+
+  <div class="content" data-type="1" onclick="play(this)">
+    <ul class="content__body">
+      <li class="content__item content__item--1" ></li>
+      <li class="content__item content__item--2"></li>
+      <li class="content__item content__item--3"></li>
+    </ul>
+    <div class="content__time"></div>
+    <div class="content__mask"></div>
+  </div>
+  <script src="./js/play.js"></script>
+</body>
+</html>

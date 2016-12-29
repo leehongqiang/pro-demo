@@ -52,7 +52,8 @@
       isGeographicis:false,//true时 Geographicis必须填写，false addr必须填写，如果为true按照默认按照经纬度搜索
       Geographicis:[116.397428, 39.90923],//根据经纬度查找
       range:1500,//默认为1000米，如果为0将使用默认值
-      addr:this.value//根据具体地点关键字查找
+      addr:this.value,//根据具体地点关键字查找
+      size:10//搜索结果条数设置,如果不设置默认为10条
     }).then(function (date) {
       let html = '';
       if(date.length !== 0){

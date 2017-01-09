@@ -20,7 +20,7 @@
 <hr>
 <input type="text" name="" placeholder="请输入地址">
 <div class="listAddr"></div>
-<script src="http://webapi.amap.com/maps?v=1.3&key=yourKey"></script>
+<script src="http://webapi.amap.com/maps?v=1.3&key=304ddf7cb9b6415d4db8ab8cf3d97e10"></script>
 <script src="./js/map.js"></script>
 <script>
   const newMap = new Maps({
@@ -32,7 +32,15 @@
       zoomEnable:false//设置地图是否可缩放
     }
   })
-  newMap.changeMapCenter([116.397428, 39.90923])
+  //ios下可以调用的下面的方法进行经纬度转换
+  newMap.convertAdress({
+    posi:[104.0650229027,30.5446948650]
+  }).then(function (data) { 
+    console.log(data)
+   });
+  newMap.earthTransformMars(30.5446948650,104.0650229027);
+
+  newMap.changeMapCenter([116.397428, 39.90923]);
   newMap.addMark({
     position:[116.397428, 39.90923],//标记中心点
     icon:false,//false 使用默认的，需要自定义的传入图标路径

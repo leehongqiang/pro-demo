@@ -32,12 +32,13 @@
       zoomEnable:false//设置地图是否可缩放
     }
   })
-  //ios下可以调用的下面的方法进行经纬度转换
+  //ios下可以调用的下面的方法进行经纬度转换convertAdress和earthTransformMars使用其一即可
   newMap.convertAdress({
     posi:[104.0650229027,30.5446948650]
   }).then(function (data) { 
     console.log(data)
    });
+   //或者使用此方法进行转换
   newMap.earthTransformMars(30.5446948650,104.0650229027);
 
   newMap.changeMapCenter([116.397428, 39.90923]);

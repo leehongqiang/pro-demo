@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" />
+    <title>永诚保险VIP业绩排行榜</title>
+    <link rel="stylesheet" href="css/common.css"/>
+    <link href="css/bootstrap.css" rel="stylesheet">
+    <link href="css/index.css" rel="stylesheet">
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="//cdn.bootcss.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="//cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <style>
+
+
+    </style>
+</head>
+<body>
+<div class="container-fluid">
+    <div class="row">
+        <div class="all-padding col-xs-12 text-center">
+            <ul class="yc-top">
+                <li class="col-xs-8 text-left yc-top-time"><span>2016年</span><span>7</span>月<span>7</span>日-<span>7</span>月<span>20</span>日</li>
+                <li class="col-xs-4"><a class="btn btn-sm btn-primary pull-right" href="selectTime.html">选择日期</a></li>
+            </ul>
+        </div>
+        <div class="all-padding col-xs-12">
+            <ul id="myTab" class="nav nav-tabs">
+                <li class="active nav-list"><a class="nav-padding yc-nav" href="#index-gw" data-toggle="tab" style=" padding:4px 0 10px 0"><i></i><span class="yc-nav-padding">顾问</span></a>
+                </li>
+                <li class="nav-list"><a href="#index-fgs" data-toggle="tab" style=" padding:4px 0 10px 0"><i></i><span class="yc-nav-padding">分公司</span></a></li>
+                <li class="nav-list" ><a href="#index-hnfgs" data-toggle="tab" style=" padding:4px 0 10px 0"><i style="background: #8ED01A"></i><span class="yc-nav-padding">华能分公司</span></a></li>
+                <li class="nav-list" ><a href="#index-hngw" data-toggle="tab" style=" padding:4px 0 10px 0"><i style="background: #8ED01A"></i><span class="yc-nav-padding">华能顾问</span></a></li>
+            </ul>
+            <div id="myTabContent" class="tab-content">
+                <div class="tab-pane fade in active" id="index-gw">
+                    <div class="all-padding yc-title col-xs-12">
+                        <h5 class="text-center" style="color: #3D9FF8">驻点业务周业绩排行榜</h5>
+                    </div>
+                    <div class="all-padding col-xs-12">
+                        <p class="text-left yc-pm-title">前三甲</p>
+                    </div>
+                    <div class="col-xs-12" style="padding-top: 10px;">
+                        <ul class="col-xs-4 yc-pm" onclick="jumpToPage('userInfo.html')">
+                            <li class="vip-top"><img class="img-circle center-block" src="img/large_head1.png" alt="" width="66" height="66"/><img src="img/icon_no-1@2x.png" class="vip-ico" width="50" height="50"></li>
+                            <li class="vip-mid"><p class="text-center">小明用</p></li>
+                            <li class="vip-bottom"><p class="text-center">山东分公司</p></li>
+
+                        </ul>
+                        <ul class="col-xs-4 yc-pm" onclick="jumpToPage('userInfo.html')">
+                            <li class="vip-top"><img class="img-circle center-block" src="img/large_head2.png" alt="" width="66" height="66"/><img src="img/icon_no-2@2x.png" class="vip-ico" width="50" height="50"></li>
+                            <li class="vip-mid"><p class="text-center">小明用</p></li>
+                            <li class="vip-bottom"><p class="text-center">山东分公司</p></li>
+                        </ul>
+                        <ul class="col-xs-4 yc-pm" onclick="jumpToPage('userInfo.html')">
+                            <li class="vip-top"><img class="img-circle center-block" src="img/large_head3.png" alt="" width="66" height="66"/><img src="img/icon_no-3@2x.png" class="vip-ico" width="50" height="50"></li>
+                            <li class="vip-mid"><p class="text-center">小明用</p></li>
+                            <li class="vip-bottom"><p class="text-center">山东分公司</p></li>
+                        </ul>
+                    </div>
+                    <table class="table table-hover">
+                        <thead >
+                        <tr class="text-center">
+                            <th><span>排名</span></th>
+                            <th><span>机构</span></th>
+                            <th><span>金融顾问</span></th>
+                            <th><span>本周保费(万元)</span></th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr onclick="jumpToPage('userInfo.html')">
+                            <td>no.<span>1</span></td>
+                            <td>山东</td>
+                            <td>小王</td>
+                            <td class="last-td">99.99<span class="pull-right yc-data-z"><img class="yc-data-zan" src="img/icon_good.png" alt="" width="18" height="18" data-is-z="0"/>6</span></td>
+                        </tr>
+                        <tr onclick="jumpToPage('userInfo.html')">
+                            <td>no.<span>2</span></td>
+                            <td>山东</td>
+                            <td>小王</td>
+                            <td>99.99<span class="pull-right yc-data-z"><img class="yc-data-zan" src="img/icon_good_selcet.png" alt="" width="18" height="18" data-is-z="1"/>6</span></td>
+                        </tr>
+                        <tr onclick="jumpToPage('userInfo.html')">
+                            <td>no.<span>3</span></td>
+                            <td>山东</td>
+                            <td>小王</td>
+                            <td>99.99<span class="pull-right yc-data-z"><img class="yc-data-zan" src="img/icon_good.png" alt="" width="18" height="18" data-is-z="0"/>6</span></td>
+                        </tr>
+                        <tr onclick="jumpToPage('userInfo.html')">
+                            <td>no.<span>4</span></td>
+                            <td>山东</td>
+                            <td>小王</td>
+                            <td>99.99<span class="pull-right yc-data-z"><img class="yc-data-zan" src="img/icon_good_selcet.png" alt="" width="18" height="18" data-is-z="1"/>6</span></td>
+                        </tr>
+                        <tr onclick="jumpToPage('userInfo.html')">
+                            <td>no.<span>5</span></td>
+                            <td>山东</td>
+                            <td>小王</td>
+                            <td>99.99<span class="pull-right yc-data-z"><img class="yc-data-zan" src="img/icon_good.png" alt="" width="18" height="18" data-is-z="0"/>6</span></td>
+                        </tr>
+                        <tr onclick="jumpToPage('userInfo.html')">
+                            <td>no.<span>6</span></td>
+                            <td>山东</td>
+                            <td>小王</td>
+                            <td>99.99<span class="pull-right yc-data-z"><img class="yc-data-zan" src="img/icon_good_selcet.png" alt="" width="18" height="18" data-is-z="1"/>6</span></td>
+                        </tr>
+                        <tr onclick="jumpToPage('userInfo.html')">
+                            <td>no.<span>7</span></td>
+                            <td>山东</td>
+                            <td>小王</td>
+                            <td>99.99<span class="pull-right yc-data-z"><img class="yc-data-zan" src="img/icon_good.png" alt="" width="18" height="18" data-is-z="0"/>6</span></td>
+                        </tr>
+                        <tr onclick="jumpToPage('userInfo.html')">
+                            <td>no.<span>8</span></td>
+                            <td>山东</td>
+                            <td>小王</td>
+                            <td>99.99<span class="pull-right yc-data-z"><img class="yc-data-zan" src="img/icon_good_selcet.png" alt="" width="18" height="18" data-is-z="1"/>6</span></td>
+                        </tr>
+                        </tbody>
+                    </table>
+                    <!--<div class="col-xs-12">
+                        <p class="text-center" style="line-height: 40px;font-size: 14px;color:#3D9FF8">加载更多</p>
+                    </div>-->
+                </div>
+                <div class="tab-pane fade" id="index-fgs">
+                    <div class="all-padding yc-title col-xs-12">
+                        <h5 class="text-center" style="color: #3D9FF8">驻点业务周业绩排行榜</h5>
+                    </div>
+                    <div id="yc-zz-fgs" class="col-xs-12" style="padding-top: 10px;padding-left:0;padding-right:0;width: 100% height: 250px;border-bottom: 1px solid #dfdfe2;margin-bottom: 10px;">
+                        <div id="fgs" style="width: 100%;height:240px;margin-bottom: 10px"></div>
+                    </div>
+                    <table class="table table-hover">
+                        <thead class="yc-fgs-table-thead" >
+                        <tr class="text-center">
+                            <th><span>排名</span></th>
+                            <th><span>机构</span></th>
+                            <th><span>新增单位数</span></th>
+                            <th><span>计划达成率</span></th>
+                            <th><span>本周保费(万元)</span></th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr class="yc-fgs-table" onclick="jumpToPage('companyInfo.html')">
+                            <td>no.<span>1</span></td>
+                            <td>山东</td>
+                            <td>小王</td>
+                            <td>99.99</td>
+                            <td>99.99</td>
+                        </tr>
+                        <tr class="yc-fgs-table" onclick="jumpToPage('companyInfo.html')">
+                            <td>no.<span>2</span></td>
+                            <td>山东</td>
+                            <td>小王</td>
+                            <td>99.99</td>
+                            <td>99.99</td>
+                        </tr>
+                        <tr class="yc-fgs-table" onclick="jumpToPage('companyInfo.html')">
+                            <td>no.<span>3</span></td>
+                            <td>山东</td>
+                            <td>小王</td>
+                            <td>99.99</td>
+                            <td>99.99</td>
+                        </tr>
+                        <tr class="yc-fgs-table" onclick="jumpToPage('companyInfo.html')">
+                            <td>no.<span>4</span></td>
+                            <td>山东</td>
+                            <td>小王</td>
+                            <td>99.99</td>
+                            <td>99.99</td>
+                        </tr>
+                        <tr class="yc-fgs-table" onclick="jumpToPage('companyInfo.html')">
+                            <td>no.<span>5</span></td>
+                            <td>山东</td>
+                            <td>小王</td>
+                            <td>99.99</td>
+                            <td>99.99</td>
+                        </tr>
+                        <tr class="yc-fgs-table" onclick="jumpToPage('companyInfo.html')">
+                            <td>no.<span>6</span></td>
+                            <td>山东</td>
+                            <td>小王</td>
+                            <td>99.99</td>
+                            <td>99.99</td>
+                        </tr>
+                        <tr class="yc-fgs-table" onclick="jumpToPage('companyInfo.html')">
+                            <td>no.<span>7</span></td>
+                            <td>山东</td>
+                            <td>小王</td>
+                            <td>99.99</td>
+                            <td>99.99</td>
+                        </tr>
+                        <tr class="yc-fgs-table" onclick="jumpToPage('companyInfo.html')">
+                            <td>no.<span>8</span></td>
+                            <td>山东</td>
+                            <td>小王</td>
+                            <td>99.99</td>
+                            <td>99.99</td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="tab-pane fade" id="index-hnfgs">
+                    <div class="all-padding yc-title col-xs-12">
+                        <h5 class="text-center" style="color: #3D9FF8">驻点业务周业绩排行榜</h5>
+                    </div>
+                    <div id="yc-zz-hnfgs" class="col-xs-12" style="padding-top: 10px;padding-left:0;padding-right:0;width: 100% height: 250px;border-bottom: 1px solid #dfdfe2;margin-bottom: 10px;">
+                        <div id="hnfgs" style="width: 100%;height:250px;padding-bottom: 10px"></div>
+                    </div>
+                    <table class="table table-hover">
+                        <thead class="yc-hnfgs-table-thead">
+                        <tr class="text-center">
+                            <th><span>排名</span></th>
+                            <th><span>机构</span></th>
+                            <th><span>本周保费(万元)</span></th>
+                            <th><span>当年累计保费(万元)</span></th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr onclick="jumpToPage('companyInfo.html')">
+                            <td>no. <span>1</span></td>
+                            <td>山东</td>
+                            <td>99.99</td>
+                            <td>99.99</td>
+                        </tr>
+                        <tr onclick="jumpToPage('companyInfo.html')">
+                            <td>no. <span>2</span></td>
+                            <td>山东</td>
+                            <td>99.99</td>
+                            <td>99.99</td>
+                        </tr>
+                        <tr onclick="jumpToPage('companyInfo.html')">
+                            <td>no. <span>3</span></td>
+                            <td>山东</td>
+                            <td>99.99</td>
+                            <td>99.99</td>
+                        </tr>
+                        <tr onclick="jumpToPage('companyInfo.html')">
+                            <td>no. <span>4</span></td>
+                            <td>山东</td>
+                            <td>99.99</td>
+                            <td>99.99</td>
+                        </tr>
+                        <tr onclick="jumpToPage('companyInfo.html')">
+                            <td>no. <span>5</span></td>
+                            <td>山东</td>
+                            <td>99.99</td>
+                            <td>99.99</td>
+                        </tr>
+                        <tr onclick="jumpToPage('companyInfo.html')">
+                            <td>no. <span>6</span></td>
+                            <td>山东</td>
+                            <td>99.99</td>
+                            <td>99.99</td>
+                        </tr>
+                        <tr onclick="jumpToPage('companyInfo.html')">
+                            <td>no. <span>7</span></td>
+                            <td>山东</td>
+                            <td>99.99</td>
+                            <td>99.99</td>
+                        </tr>
+                        <tr onclick="jumpToPage('companyInfo.html')">
+                            <td>no. <span>8</span></td>
+                            <td>山东</td>
+                            <td>99.99</td>
+                            <td>99.99</td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="tab-pane fade" id="index-hngw">
+                    <div class="all-padding yc-title col-xs-12">
+                        <h5 class="text-center" style="color: #3D9FF8">驻点业务周业绩排行榜</h5>
+                    </div>
+                    <div class="all-padding col-xs-12">
+                        <p class="text-left yc-pm-title">前三甲</p>
+                    </div>
+                    <div class="col-xs-12" style="padding-top: 10px;">
+                        <ul class="col-xs-4 yc-pm" onclick="jumpToPage('userInfo.html')">
+                            <li class="vip-top"><img class="img-circle center-block" src="img/large_head1.png" alt="" width="66" height="66"/><img src="img/icon_no-1@2x.png" class="vip-ico" width="50%" height="50%"></li>
+                            <li class="vip-mid"><p class="text-center">小明用</p></li>
+                            <li class="vip-bottom"><p class="text-center">山东分公司</p></li>
+                        </ul>
+                        <ul class="col-xs-4 yc-pm" onclick="jumpToPage('userInfo.html')">
+                            <li class="vip-top"><img class="img-circle center-block" src="img/large_head2.png" alt="" width="66" height="66"/><img src="img/icon_no-2@2x.png" class="vip-ico" width="50%" height="50%"></li>
+                            <li class="vip-mid"><p class="text-center">小明用</p></li>
+                            <li class="vip-bottom"><p class="text-center">山东分公司</p></li>
+                        </ul>
+                        <ul class="col-xs-4 yc-pm" onclick="jumpToPage('userInfo.html')">
+                            <li class="vip-top"><img class="img-circle center-block" src="img/large_head3.png" alt="" width="66" height="66"/><img src="img/icon_no-3@2x.png" class="vip-ico" width="50%" height="50%"></li>
+                            <li class="vip-mid"><p class="text-center">小明用</p></li>
+                            <li class="vip-bottom"><p class="text-center">山东分公司</p></li>
+                        </ul>
+                    </div>
+                    <table class="table table-hover">
+                        <thead >
+                        <tr class="text-center">
+                            <th><span>排名</span></th>
+                            <th><span>机构</span></th>
+                            <th><span>金融顾问</span></th>
+                            <th><span>本周保费(万元)</span></th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr onclick="jumpToPage('userInfo.html')">
+                            <td>no.<span>1</span></td>
+                            <td>山东</td>
+                            <td>小王</td>
+                            <td>99.99<span class="pull-right yc-data-z"><img class="yc-data-zan" src="img/icon_good.png" alt="" width="18" height="18" data-is-z="0"/>6</span></td>
+                        </tr>
+                        <tr onclick="jumpToPage('userInfo.html')">
+                            <td>no.<span>2</span></td>
+                            <td>山东</td>
+                            <td>小王</td>
+                            <td>99.99<span class="pull-right yc-data-z"><img class="yc-data-zan" src="img/icon_good_selcet.png" alt="" width="18" height="18" data-is-z="1"/>6</span></td>
+                        </tr>
+                        <tr onclick="jumpToPage('userInfo.html')">
+                            <td>no.<span>3</span></td>
+                            <td>山东</td>
+                            <td>小王</td>
+                            <td>99.99<span class="pull-right yc-data-z"><img class="yc-data-zan" src="img/icon_good.png" alt="" width="18" height="18" data-is-z="0"/>6</span></td>
+                        </tr>
+                        <tr onclick="jumpToPage('userInfo.html')">
+                            <td>no.<span>4</span></td>
+                            <td>山东</td>
+                            <td>小王</td>
+                            <td>99.99<span class="pull-right yc-data-z"><img class="yc-data-zan" src="img/icon_good_selcet.png" alt="" width="18" height="18" data-is-z="1"/>6</span></td>
+                        </tr>
+                        <tr onclick="jumpToPage('userInfo.html')">
+                            <td>no.<span>5</span></td>
+                            <td>山东</td>
+                            <td>小王</td>
+                            <td>99.99<span class="pull-right yc-data-z"><img class="yc-data-zan" src="img/icon_good.png" alt="" width="18" height="18" data-is-z="0"/>6</span></td>
+                        </tr>
+                        <tr onclick="jumpToPage('userInfo.html')">
+                            <td>no.<span>6</span></td>
+                            <td>山东</td>
+                            <td>小王</td>
+                            <td>99.99<span class="pull-right yc-data-z"><img class="yc-data-zan" src="img/icon_good_selcet.png" alt="" width="18" height="18" data-is-z="1"/>6</span></td>
+                        </tr>
+                        <tr onclick="jumpToPage('userInfo.html')">
+                            <td>no.<span>7</span></td>
+                            <td>山东</td>
+                            <td>小王</td>
+                            <td>99.99<span class="pull-right yc-data-z"><img class="yc-data-zan" src="img/icon_good.png" alt="" width="18" height="18" data-is-z="0"/>6</span></td>
+                        </tr>
+                        <tr onclick="jumpToPage('userInfo.html')">
+                            <td>no.<span>8</span></td>
+                            <td>山东</td>
+                            <td>小王</td>
+                            <td>99.99<span class="pull-right yc-data-z"><img class="yc-data-zan" src="img/icon_good_selcet.png" alt="" width="18" height="18" data-is-z="1"/>6</span></td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="../common/js/jquery-11.3.min.js"></script>
+<script src="../common/js/bootstrap.min.js"></script>
+<script src="../common/js/echarts.min.js"></script>
+<script src="../common/js/drawChart.js"></script>
+
+<script>
+    function jumpToPage(herf){
+        window.open(herf,'_self')
+    }
+    function getClientWidth() {
+        var clientWidth = 0;
+        if (document.body.clientWidth && document.documentElement.clientWidth) {
+            clientWidth = (document.body.clientWidth < document.documentElement.clientWidth) ? document.body.clientWidth: document.documentElement.clientWidth;
+        } else {
+            clientWidth = (document.body.clientWidth > document.documentElement.clientWidth) ? document.body.clientWidth: document.documentElement.clientWidth;
+        }
+        return clientWidth;
+    }
+    function setBarChartDate(){
+        var option_bar = {
+            title:{
+                text:"本周保费(万元)",//标题，默认为“折线图”
+                color:"#333",//标题颜色，默认为“#333”
+                fontWeight:"normal",//标题粗细，默认为“normal”
+                fontSize:"18px",//标题字体大小，默认为“18px”
+                fontFamily:"微软雅黑"//标题字体类型，默认为宋体
+            },
+            textRotate:40,
+            /*displayType:'perpendicular',*/
+            chartType:"bar",//图形类型，必填
+            xData:["山东","广西","福建","黑龙江","宁夏","浙江","河南","湖北","陕西","安徽"],//X轴显示文字，默认为空字符串
+            xBoundaryGap:true,//X轴边界两边是否留白，默认为true
+            yAxis:{
+                type:"value"//坐标轴类型，默认为value
+            },
+            dataSet:[{
+                barWidth:"50%",//柱子宽度，默认为60%
+                name:"保费",//tooltip显示名称，不填不显示
+                /*data:[98,88,80,72,68,52,37,35,17,8]//数据，二维数组类型，必填*/
+                data:[8,17,35,45,55,65,75,85,90,99]//数据，二维数组类型，必填
+            }]
+        };
+        $(".nav-list").click(function () {
+            var _this = $(this);
+            var _index = _this.index();
+            var width =getClientWidth();
+            if(_index == 1){
+                $("#fgs").css("width",(width)+"px");
+                $("#fgs").drawChart(option_bar);
+            }
+            else if(_index == 2){
+                $("#hnfgs").css("width",(width)+"px");
+                $("#hnfgs").drawChart(option_bar);
+            }
+        });
+    }
+    function initIndex(){
+
+    }
+    function doClickZhan(){
+        $(".yc-data-z").click(function (e) {
+            e.stopPropagation();
+            var _this = $(this);
+            var _value = _this.text();
+            var _imgdpm = _this.find("img");
+            var is_z = _imgdpm.attr("data-is-z");
+            if(is_z == 0){
+                _this.html('<img class="yc-data-zan" src="img/icon_good_selcet.png" alt="" width="18" height="18" data-is-z="1"/>'+(parseInt(_value)+1));
+            }else{
+                _this.html('<img class="yc-data-zan" src="img/icon_good.png" alt="" width="18" height="18" data-is-z="0"/>'+(parseInt(_value)-1));
+            }
+
+        });
+    }
+    doClickZhan();
+    setBarChartDate();
+</script>
+</body>
+</html>

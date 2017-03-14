@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>公司详情</title>
+    <link rel="stylesheet" href="css/common.css"/>
+    <link href="../common/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/details.css"/>
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="//cdn.bootcss.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="//cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+<body>
+<div class="container-fluid">
+    <div class="row">
+        <div class="content-main">
+        	<div class="head">
+        		<div class="hi-c left">山东分公司</div>
+        		<div class="rt right">
+        			<a  onclick="history.go(-1)"><img src="img/back.png" /><span>返回</span></a>
+        		</div>
+        	</div>
+        	<div class="chart-c">
+        		<!--<div class="hit-c">本周保费（万元）</div>-->
+        		<div id="chart-c-main" style="width: 100%;height:258px;"></div>
+        	</div>
+        </div>
+    </div>
+</div>
+
+
+<script src="../common/js/jquery-2.2.3.min.js"></script>
+<script src="../common/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="../common/js/echarts.min.js" ></script>
+<script type="text/javascript" src="../common/js/drawChart.js" ></script>
+<script>
+	var option_line = {
+        title:{
+            text:"本周保费(万元)",//标题，默认为“折线图”
+            color:"#999",//标题颜色，默认为“#333”
+            fontWeight:"normal",//标题粗细，默认为“normal”
+            fontSize:"14px",//标题字体大小，默认为“18px”
+            fontFamily:"微软雅黑"//标题字体类型，默认为宋体
+        },
+        chartType:"line",//图形类型，必填
+        xData:["第一周","第二周","第三周","第四周","第五周","第六周","当前周"],//X轴显示文字，默认为空字符串
+        xBoundaryGap:false,//X轴边界两边是否留白，默认为true
+        yAxis:{
+            type:"value"//坐标轴类型，默认为value
+        },
+        data: [ [51,65,78,54,42,24,33] ],//数据，二维数组类型，必填
+        dataSet:[{
+            showPoint:true,//每一个X刻度对应的Y轴图形是否显示数据点，默认为true
+            color:"#398dee",//线条颜色，默认为#398dee
+            name:"保费",//tooltip显示名称，不填不显示
+            topColor:"#cadffa",//图形上边界颜色，默认为#cadffa
+            bottomColor:"#e8f2fd"//图形下边界颜色，默认为#e8f2fd
+        }]
+    };
+    $("#chart-c-main").drawChart(option_line);
+</script>
+</body>
+</html>

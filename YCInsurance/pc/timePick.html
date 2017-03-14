@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>选择时间</title>
+    <link href="../common/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/common.css"/>
+    <link rel="stylesheet" href="css/index.css"/>
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="//cdn.bootcss.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="//cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+<body>
+<div class="container-fluid ranking-gap">
+    <div class="row gap-ct">
+        <div class="col-xs-12 panel-ct">
+            <ul id="myTab" class="nav nav-tabs ranking-tab">
+                <div class="rt pull-right">
+                    <a class="back" onclick="history.go(-1)"><img src="img/back.png" /><span>返回</span></a>
+                </div>
+            </ul>
+            <div id="myTabContent" class="tab-content">
+                <!--周-->
+                <div class="tab-pane fade in active" id="week">
+                    <div class="col-xs-12 week-ct">
+                    </div>
+                </div>
+                <!--月-->
+                <div class="tab-pane fade" id="month">
+                    <div class="col-xs-12">
+                        <button type="button" class="btn btn-default btn-lg">2016年8月</button>
+                        <button type="button" class="btn btn-default btn-lg">2016年9月</button>
+                        <button type="button" class="btn btn-default btn-lg">2016年10月</button>
+                        <button type="button" class="btn btn-default btn-lg">2016年11月</button>
+                    </div>
+                </div>
+                <!-- 季度-->
+                <div class="tab-pane fade" id="quarter">
+                    <div class="col-xs-12">
+                        <button type="button" class="btn btn-default btn-lg">2016年第1季</button>
+                        <button type="button" class="btn btn-default btn-lg">2016年第2季</button>
+                        <button type="button" class="btn btn-default btn-lg">2016年第3季</button>
+                        <button type="button" class="btn btn-default btn-lg">2016年第4季</button>
+                    </div>
+                </div>
+                <!-- 年-->
+                <div class="tab-pane fade" id="year">
+                    <div class="col-xs-12">
+                        <button type="button" class="btn btn-default btn-lg">2016年</button>
+                        <button type="button" class="btn btn-default btn-lg">2017年</button>
+                        <button type="button" class="btn btn-default btn-lg">2018年</button>
+                        <button type="button" class="btn btn-default btn-lg">2019年</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+
+<script src="../common/js/jquery-2.2.3.min.js"></script>
+<script src="../common/js/bootstrap.min.js"></script>
+<script src="js/timePick.js"></script>
+</body>
+</html>

@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" />
+    <title>个人详情</title>
+    <link rel="stylesheet" href="css/common.css"/>
+    <link href="css/bootstrap.css" rel="stylesheet">
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="//cdn.bootcss.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="//cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <style>
+        body{
+            font-family:"微软雅黑";
+            background: #F9F9F9;
+            font-size: 13px;
+        }
+        .yc-info{
+            padding-left: 0;
+            padding-right: 0;
+        }
+        .info-top{
+            margin-top: 10px;
+            padding: 10px 15px;
+
+        }
+        .yc-border{
+            border: 1px solid #dfdfe2;
+            border-right: none;
+            border-left: none;
+        }
+        .yc-data{
+            width: 100%;
+            height: 260px;
+        }
+        .yc-return{
+            line-height: 45px;
+        }
+        .yc-info-zan{
+            padding-right: 0;
+            padding-left: 0;
+        }
+        .yc-info-name{
+            margin: 5px 0 0 5px;
+            font-size: 12px;
+            color:#999;
+        }
+        .info-zan{
+            color:#3D9FF8;
+        }
+        .info-name{
+            font-size: 14px;
+            color:#333;
+        }
+        .yc-info-mid{
+            margin: 10px 0;
+            border-top: 1px solid #dfdfe2;
+            border-bottom: 1px solid #dfdfe2;
+        }
+        .table tbody tr td{
+            line-height: 2;
+            text-align: center;
+            border-color: #dfdfe2;
+        }
+    </style>
+</head>
+<body>
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-xs-12 yc-info">
+            <div class="col-xs-12 info-top yc-border">
+                <div class="fl"><img class="img-circle" src="img/smale_head1.png" alt="" width="40" height="40"/></div>
+                <div class="fl yc-info-name">
+                    <div class="info-name">王小二</div>
+                    <div>山东分公司</div>
+                </div>
+            </div>
+            <div class="col-xs-12 yc-info-mid" style="width: 320px;height: 240px">
+                <div id="yc-info" style="position: absolute;top: 0;bottom: 0;left: 0;right: 0;"></div>
+            </div>
+            <div class="col-xs-12 yc-info-zan">
+                <table class="table table-hover">
+                    <tbody>
+                        <tr >
+                            <td>王小二</td>
+                            <td class="info-zan">赞了你</td>
+                            <td>2016-8-12</td>
+                            <td>09:55:12</td>
+                        </tr>
+                        <tr >
+                            <td>王小二</td>
+                            <td class="info-zan">赞了你</td>
+                            <td>2016-8-12</td>
+                            <td>09:55:12</td>
+                        </tr>
+                        <tr >
+                            <td>王小二</td>
+                            <td class="info-zan">赞了你</td>
+                            <td>2016-8-12</td>
+                            <td>09:55:12</td>
+                        </tr>
+                        <tr >
+                            <td>王小二</td>
+                            <td class="info-zan">赞了你</td>
+                            <td>2016-8-12</td>
+                            <td>09:55:12</td>
+                        </tr>
+                        <tr >
+                            <td>王小二</td>
+                            <td class="info-zan">赞了你</td>
+                            <td>2016-8-12</td>
+                            <td>09:55:12</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="../common/js/jquery-11.3.min.js"></script>
+<script src="../common/js/bootstrap.min.js"></script>
+<script src="../common/js/echarts.min.js"></script>
+<script src="../common/js/drawChart.js"></script>
+<script>
+    function jumpToPage(herf){
+        window.open(herf,'_self')
+    }
+    function getClientWidth() {
+        var clientWidth = 0;
+        if (document.body.clientWidth && document.documentElement.clientWidth) {
+            clientWidth = (document.body.clientWidth < document.documentElement.clientWidth) ? document.body.clientWidth: document.documentElement.clientWidth;
+        } else {
+            clientWidth = (document.body.clientWidth > document.documentElement.clientWidth) ? document.body.clientWidth: document.documentElement.clientWidth;
+        }
+        return clientWidth;
+    }
+    function setLineChartDate(){
+        var option_line = {
+            title:{
+                text:"本周保费(万元)",//标题，默认为“折线图”
+                color:"#333",//标题颜色，默认为“#333”
+                fontWeight:"normal",//标题粗细，默认为“normal”
+                fontSize:"18px",//标题字体大小，默认为“18px”
+                fontFamily:"微软雅黑"//标题字体类型，默认为宋体
+            },
+            chartType:"line",//图形类型，必填
+            xData:["2016年12月第二周","2016年12月第三周","2016年12月第四周","2017年1月第一周","当前周"],//X轴显示文字，默认为空字符串
+            xBoundaryGap:false,//X轴边界两边是否留白，默认为true
+            yAxis:{
+                type:"value"//坐标轴类型，默认为value
+            },
+            textRotate:"0",
+            data:[ [65,78,54,42,24] ],//数据，二维数组类型，必填
+            dataSet:[{
+                showPoint:true,//每一个X刻度对应的Y轴图形是否显示数据点，默认为true
+                color:"#398dee",//线条颜色，默认为#398dee
+                name:"保费",//tooltip显示名称，不填不显示
+                topColor:"#cadffa",//图形上边界颜色，默认为#cadffa
+                bottomColor:"#e8f2fd"//图形下边界颜色，默认为#e8f2fd
+            }]
+        };
+        var _width =getClientWidth();
+        $(".yc-info-mid").css("width",_width+"px");
+        $("#yc-info").drawChart(option_line);
+    }
+    setLineChartDate();
+</script>
+</body>
+</html>

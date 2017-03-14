@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>排行榜首页</title>
+    <link href="../common/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/common.css"/>
+    <link rel="stylesheet" href="css/index.css"/>
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="//cdn.bootcss.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="//cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+<body>
+<div class="container-fluid ranking-gap">
+    <div class="row gap-ct">
+        <div class="pick-time-ct text-center">
+            <ul class="clearfix">
+                <li class="text-left col-xs-8 cur-time"><span>2016年</span><span>7月</span><span>7日</span>-<span>7月</span><span>20日</span></li>
+                <li class="pull-right"><a class="btn btn-pick-time"  href="./timePick.html">选择日期</a></li>
+            </ul>
+        </div>
+        <div class="col-xs-12 panel-ct">
+            <ul id="myTab" class="nav nav-tabs ranking-tab">
+                <li class="active"><a class="tab-title orange-circle" href="#adviser" data-toggle="tab" >顾问</a></li>
+                <li><a class="tab-title orange-circle" href="#branchCpn" data-toggle="tab">分公司</a></li>
+                <li><a class="tab-title green-circle" href="#hn" data-toggle="tab">华能分公司</a></li>
+                <li><a class="tab-title green-circle" href="#hngw" data-toggle="tab">华能顾问</a></li>
+            </ul>
+            <div id="myTabContent" class="tab-content">
+                <!--顾问-->
+                <div class="tab-pane fade  in active" id="adviser">
+                    <div class="col-xs-12">
+                        <h4 class="text-center ranking-type">驻点金融顾问周业绩排行榜</h4>
+                    </div>
+                    <div class="col-xs-12 top-tree">
+                        <div class="col-xs-4">
+                            <a href="details.html">
+                                <div><img class="img-circle center-block" src="img/head.png" alt="" width="66" height="66"/></div>
+                                <div class="tb-ct">
+                                    <div class="text-center ranking-info tb" >
+                                        <div class="tb-cell" >
+                                            <img class="top" src="img/ranking-1.png">
+                                        </div>
+                                        <div class="tb-cell">
+                                            <p class="ranking-name"> 小明用</p>
+                                            <p class="ranking-company">山东分公司</p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </a>
+                        </div>
+                        <div class="col-xs-4">
+                            <a href="details.html">
+                                <div><img class="img-circle center-block" src="img/head.png" alt="" width="66" height="66"/></div>
+                                <div class="tb-ct">
+                                    <div class="text-center ranking-info tb" >
+                                        <div class="tb-cell" >
+                                            <img class="top" src="img/ranking-2.png">
+                                        </div>
+                                        <div class="tb-cell">
+                                            <p class="ranking-name"> 小明用</p>
+                                            <p class="ranking-company">山东分公司</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="col-xs-4">
+                            <a href="details.html">
+                                <div><img class="img-circle center-block" src="img/head.png" alt="" width="66" height="66"/></div>
+                                <div class="tb-ct">
+                                    <div class="text-center ranking-info tb" >
+                                        <div class="tb-cell" >
+                                            <img class="top" src="img/ranking-3.png">
+                                        </div>
+                                        <div class="tb-cell">
+                                            <p class="ranking-name"> 小明用</p>
+                                            <p class="ranking-company">山东分公司</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+
+                        </div>
+                    </div>
+                    <table class="table table-hover ranking-table">
+                        <thead >
+                        <tr class="text-center">
+                            <th class="border-line">排名</th>
+                            <th class="border-line">机构</th>
+                            <th class="border-line">顾问</th>
+                            <th class="border-line">本周保费(万元)</th>
+                            <th class="border-line">当前累计保费(万元)</th>
+                            <th class="border-line">计划达成率</th>
+                            <th>&nbsp;</th>
+                        </tr>
+                        </thead>
+                        <tbody class="text-center" id="adviser-ranking">
+
+                        </tbody>
+                    </table>
+                </div>
+                <!--分公司-->
+                <div class="tab-pane fade" id="branchCpn">
+                    <div class="col-xs-12">
+                        <h4 class="text-center ranking-type">2016年驻点分公司周业绩排行榜</h4>
+                    </div>
+                    <div class="col-xs-12 canvas">
+                           <div id="branchCanvas" style="width:100%;height:100%;"></div>
+                    </div>
+                    <table class="table table-hover">
+                        <thead>
+                            <tr class="text-center ranking-table">
+                                <th class="border-line">排名</th>
+                                <th class="border-line">机构</th>
+                                <th class="border-line">驻点计划数</th>
+                                <th class="border-line">新增驻点数</th>
+                                <th class="border-line">驻点达成率</th>
+                                <th class="border-line">累计已驻点数量</th>
+                                <th class="border-line">驻点保费(万元)</th>
+                                <th>当年累计驻点保费(万元)</th>
+                            </tr>
+                        </thead>
+                        <tbody class="text-center" id="branchCpn-ranking">
+
+                        </tbody>
+                    </table>
+                </div>
+                <!-- 华能分公司-->
+                <div class="tab-pane fade" id="hn">
+                    <div class="col-xs-12">
+                        <h4 class="text-center ranking-type">2016年驻点分公司周业绩排行榜</h4>
+                    </div>
+                    <div class="col-xs-12 canvas">
+                        <div id="hnCpy" style="width:100%;height:100%;"></div>
+                    </div>
+                    <table class="table table-hover ranking-table">
+                        <thead >
+                        <tr class="text-center">
+                            <th class="border-line">排名</th>
+                            <th class="border-line">机构</th>
+                            <th class="border-line">驻点保费(万元)</th>
+                            <th>当年累计保费(万元)</th>
+                        </tr>
+                        </thead>
+                        <tbody class="text-center">
+                        <tr >
+                            <td>1</td>
+                            <td>山东</td>
+                            <td>565</td>
+                            <td>50 </td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td>山东</td>
+                            <td>100</td>
+                            <td>50</td>
+                        </tr>
+                        <tr>
+                            <td>3</td>
+                            <td>山东</td>
+                            <td>5656</td>
+                            <td>50</td>
+                        </tr>
+                        <tr>
+                            <td>1</td>
+                            <td>山东</td>
+                            <td>7845</td>
+                            <td>50</td>
+                        </tr>
+                        <tr>
+                            <td>1</td>
+                            <td>山东</td>
+                            <td>5656</td>
+                            <td>50</td>
+                        </tr>
+                        <tr>
+                            <td>1</td>
+                            <td>山东</td>
+                            <td>56598</td>
+                            <td>50</td>
+                        </tr>
+                        <tr>
+                            <td>1</td>
+                            <td>山东</td>
+                            <td>8478</td>
+                            <td>50</td>
+                        </tr>
+                        <tr>
+                            <td>1</td>
+                            <td>山东</td>
+                            <td>484</td>
+                            <td>50</td>
+                        </tr>
+                        <tr>
+                            <td>1</td>
+                            <td>山东</td>
+                            <td>8596569</td>
+                            <td>50</td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="tab-pane fade" id="hngw">
+                    <div class="col-xs-12">
+                        <h4 class="text-center ranking-type">2016年驻点分公司周业绩排行榜</h4>
+                    </div>
+                    <div class="col-xs-12 top-tree">
+                        <div class="col-xs-4">
+                            <a href="details.html">
+                                <div><img class="img-circle center-block" src="img/head.png" alt="" width="66" height="66"/></div>
+                                <div class="tb-ct">
+                                    <div class="text-center ranking-info tb" >
+                                        <div class="tb-cell" >
+                                            <img class="top" src="img/ranking-1.png">
+                                        </div>
+                                        <div class="tb-cell">
+                                            <p class="ranking-name"> 小明用</p>
+                                            <p class="ranking-company">山东分公司</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="col-xs-4">
+                            <a href="details.html">
+                                <div><img class="img-circle center-block" src="img/head.png" alt="" width="66" height="66"/></div>
+                                <div class="tb-ct">
+                                    <div class="text-center ranking-info tb" >
+                                        <div class="tb-cell" >
+                                            <img class="top" src="img/ranking-2.png">
+                                        </div>
+                                        <div class="tb-cell">
+                                            <p class="ranking-name"> 小明用</p>
+                                            <p class="ranking-company">山东分公司</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="col-xs-4">
+                            <a href="details.html">
+                                <div><img class="img-circle center-block" src="img/head.png" alt="" width="66" height="66"/></div>
+                                <div class="tb-ct">
+                                    <div class="text-center ranking-info tb" >
+                                        <div class="tb-cell" >
+                                            <img class="top" src="img/ranking-3.png">
+                                        </div>
+                                        <div class="tb-cell">
+                                            <p class="ranking-name"> 小明用</p>
+                                            <p class="ranking-company">山东分公司</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    <table class="table table-hover ranking-table">
+                        <thead >
+                        <tr class="text-center">
+                            <th class="border-line">排名</th>
+                            <th class="border-line">机构</th>
+                            <th class="border-line">顾问</th>
+                            <th class="border-line">驻点保费(万元)</th>
+                            <th>当年累计保费(万元)</th>
+                        </tr>
+                        </thead>
+                        <tbody class="text-center">
+                        <tr >
+                            <td>1</td>
+                            <td>山东</td>
+                            <td>王顾问</td>
+                            <td>565</td>
+                            <td>50 </td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td>山东</td>
+                            <td>王顾问</td>
+                            <td>100</td>
+                            <td>50</td>
+                        </tr>
+                        <tr>
+                            <td>3</td>
+                            <td>山东</td>
+                            <td>王顾问</td>
+                            <td>5656</td>
+                            <td>50</td>
+                        </tr>
+                        <tr>
+                            <td>1</td>
+                            <td>山东</td>
+                            <td>王顾问</td>
+                            <td>7845</td>
+                            <td>50</td>
+                        </tr>
+                        <tr>
+                            <td>1</td>
+                            <td>山东</td>
+                            <td>王顾问</td>
+                            <td>5656</td>
+                            <td>50</td>
+                        </tr>
+                        <tr>
+                            <td>1</td>
+                            <td>山东</td>
+                            <td>王顾问</td>
+                            <td>56598</td>
+                            <td>50</td>
+                        </tr>
+                        <tr>
+                            <td>1</td>
+                            <td>山东</td>
+                            <td>王顾问</td>
+                            <td>8478</td>
+                            <td>50</td>
+                        </tr>
+                        <tr>
+                            <td>1</td>
+                            <td>山东</td>
+                            <td>王顾问</td>
+                            <td>484</td>
+                            <td>50</td>
+                        </tr>
+                        <tr>
+                            <td>1</td>
+                            <td>山东</td>
+                            <td>王顾问</td>
+                            <td>8596569</td>
+                            <td>50</td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+
+<script src="../common/js/jquery-2.2.3.min.js"></script>
+<script src="../common/js/bootstrap.min.js"></script>
+<script src="../common/js/echarts.min.js"></script>
+<script src="../common/js/drawChart.js"></script>
+<script src="js/index.js"></script>
+</body>
+</html>

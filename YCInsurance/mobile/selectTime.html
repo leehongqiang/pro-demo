@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" />
+    <title>选择时间</title>
+    <link rel="stylesheet" href="css/common.css"/>
+    <link href="css/bootstrap.css" rel="stylesheet">
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="//cdn.bootcss.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="//cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <style>
+        body{
+            font-family: "微软雅黑";
+        }
+        .yc-top a{
+           text-decoration: none;
+        }
+        .nav-tabs li{
+            width: 25%;
+            text-align: center;
+        }
+        .tab-content ul li{
+            height: 52px;
+            line-height: 52px;
+            border-bottom: 1px solid #dfdfe2;
+            text-align: left;
+            padding-left: 15px;
+        }
+        a{
+            color: #000;
+        }
+        .time-top{
+            padding-right: 0;
+            padding-left: 0;
+        }
+        .time-top .nav-tabs li a{
+            color: #1a9ffc;
+        }
+        .nav-tabs > li.active > a, .nav-tabs > li.active > a:hover, .nav-tabs > li.active > a:focus{
+            color: #1a9ffc;
+        }
+        .arrow-right {
+            width: 11px;
+            height: 21px;
+            background: url("img/ico-right.png") no-repeat;
+            margin-top: 15px;
+            margin-right: 15px;
+        }
+    </style>
+</head>
+<body>
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-xs-12 time-top">
+            <ul id="myTab" class="nav nav-tabs">
+                <li class="active">
+                    <a class="nav-padding" href="#yc-week" data-toggle="tab" style=" padding: 10px 9px;">
+                        周
+                    </a>
+                </li>
+                <li><a href="#yc-month" data-toggle="tab" style=" padding: 10px 9px;">月</a></li>
+                <li><a href="#yc-quarter" data-toggle="tab" style=" padding: 10px 9px;">季</a></li>
+                <li><a href="#yc-year" data-toggle="tab" style=" padding: 10px 9px;">年</a></li>
+            </ul>
+            <div id="myTabContent" class="tab-content">
+                <div class="tab-pane fade in active" id="yc-week">
+                    <ul>
+                        <li onclick="jumpToPage('mobileIndex.html')">2016年8月第一周<span class="pull-right arrow-right"></span></li>
+                        <li onclick="jumpToPage('mobileIndex.html')">2016年8月第二周<span class="pull-right arrow-right"></span></li>
+                        <li onclick="jumpToPage('mobileIndex.html')">2016年8月第三周<span class="pull-right arrow-right"></span></li>
+                        <li onclick="jumpToPage('mobileIndex.html')">2016年8月第四周<span class="pull-right arrow-right"></span></li>
+                        <li onclick="jumpToPage('mobileIndex.html')">2016年8月第五周<span class="pull-right arrow-right"></span></li>
+                    </ul>
+                </div>
+
+                <div class="tab-pane fade" id="yc-month">
+                    <ul>
+                        <li onclick="jumpToPage('mobileIndex.html')">2016年1月<span class="pull-right arrow-right"></span></li>
+                        <li onclick="jumpToPage('mobileIndex.html')">2016年2月<span class="pull-right arrow-right"></span></li>
+                        <li onclick="jumpToPage('mobileIndex.html')">2016年3月<span class="pull-right arrow-right"></span></li>
+                        <li onclick="jumpToPage('mobileIndex.html')">2016年4月<span class="pull-right arrow-right"></span></li>
+                        <li onclick="jumpToPage('mobileIndex.html')">2016年5月<span class="pull-right arrow-right"></span></li>
+                        <li onclick="jumpToPage('mobileIndex.html')">2016年6月<span class="pull-right arrow-right"></span></li>
+                        <li onclick="jumpToPage('mobileIndex.html')">2016年7月<span class="pull-right arrow-right"></span></li>
+                        <li onclick="jumpToPage('mobileIndex.html')">2016年8月<span class="pull-right arrow-right"></span></li>
+                        <li onclick="jumpToPage('mobileIndex.html')">2016年9月<span class="pull-right arrow-right"></span></li>
+                        <li onclick="jumpToPage('mobileIndex.html')">2016年10月<span class="pull-right arrow-right"></span></li>
+                        <li onclick="jumpToPage('mobileIndex.html')">2016年11月<span class="pull-right arrow-right"></span></li>
+                        <li onclick="jumpToPage('mobileIndex.html')">2016年12月<span class="pull-right arrow-right"></span></li>
+                    </ul>
+                </div>
+                <div class="tab-pane fade" id="yc-quarter">
+                    <ul>
+                        <li onclick="jumpToPage('mobileIndex.html')">2016年第一季度<span class="pull-right arrow-right"></span></li>
+                        <li onclick="jumpToPage('mobileIndex.html')">2016年第二季度<span class="pull-right arrow-right"></span></li>
+                        <li onclick="jumpToPage('mobileIndex.html')">2016年第三季度<span class="pull-right arrow-right"></span></li>
+                        <li onclick="jumpToPage('mobileIndex.html')">2016年第四季度<span class="pull-right arrow-right"></span></li>
+                    </ul>
+                </div>
+                <div class="tab-pane fade" id="yc-year">
+                    <ul>
+                        <li onclick="jumpToPage('mobileIndex.html')">2012年<span class="pull-right arrow-right"></span></li>
+                        <li onclick="jumpToPage('mobileIndex.html')">2013年<span class="pull-right arrow-right"></span></li>
+                        <li onclick="jumpToPage('mobileIndex.html')">2014年<span class="pull-right arrow-right"></span></li>
+                        <li onclick="jumpToPage('mobileIndex.html')">2015年<span class="pull-right arrow-right"></span></li>
+                        <li onclick="jumpToPage('mobileIndex.html')">2016年<span class="pull-right arrow-right"></span></li>
+                        <li onclick="jumpToPage('mobileIndex.html')">2017年<span class="pull-right arrow-right"></span></li>
+                        <li onclick="jumpToPage('mobileIndex.html')">2018年<span class="pull-right arrow-right"></span></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="../common/js/jquery-11.3.min.js"></script>
+<script src="../common/js/bootstrap.min.js"></script>
+<script>
+    function jumpToPage(herf){
+        window.open(herf,'_self')
+    }
+</script>
+</body>
+</html>

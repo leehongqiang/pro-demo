@@ -1,0 +1,175 @@
+body{
+    font-family: "微软雅黑";
+    font-size: 12px;
+}
+.all-padding{
+    padding-left:0;
+    padding-right: 0;
+}
+.nav-padding{
+    padding: 10px 9px;
+    margin-top: 0px;
+}
+tr th{
+    text-align: center;
+}
+tbody{
+    text-align: center;
+}
+.yc-top{
+    height: 41px;
+    line-height: 41px;
+    background: #eaeaea;
+}
+.yc-top-time{
+    font-size: 16px;
+}
+.btn{
+    margin-top: 5px;
+    margin-right: -8px;
+}
+.btn-sm{
+    padding: 5px 15px;
+}
+.yc-top a{
+    text-decoration: none;
+}
+.yc-pm{
+    padding: 0;
+}
+a{
+    color:#000;
+}
+p{
+    margin: 0;
+}
+.nav-tabs > li.active > a, .nav-tabs > li.active > a:hover, .nav-tabs > li.active > a:focus{
+    color: #3D9FF8;
+}
+.table{
+    margin-bottom: 0;
+}
+.table>thead>tr>th{
+    padding: 8px 0;
+}
+.yc-fgs-table-thead .text-center th span{
+    padding-right: 5px;
+    padding-left: 5px;
+}
+.yc-hnfgs-table-thead .text-center th span{
+    padding-right: 10px;
+    padding-left: 10px;
+}
+.table thead tr th span{
+    padding-right: 19px;
+    padding-left: 18px;
+    border-right: 1px solid #dfdfe2;
+}
+.table thead tr th:last-child span{
+    padding-right: 10px;
+    border-right: none;
+}
+.table > tbody > tr > td{
+    line-height: 3;
+    padding: 0 8px;
+}
+.last-td{
+    border-bottom: 1px solid #dfdfe2;
+    line-height: 3;
+    padding: 0 8px;
+}
+.table  tbody  tr:last-child  td{
+
+}
+thead{
+    border-top: 1px solid #dfdfe2;
+    border-bottom: 1px solid #dfdfe2;
+    color: #666;
+}
+.nav{
+    height:40px;
+}
+.nav li{
+    width: 25%;
+    text-align: center;
+    border-left: none;
+    height: 25px;
+    border-right: 1px solid #dfdfe2;
+    margin-top: 5px;
+}
+.nav li:last-child{
+    border-right: none;
+}
+.nav-tabs{
+    border-bottom: 1px solid #dfdfe2;
+    border-top: 1px solid #dfdfe2;
+}
+.nav .nav-list{
+    color: #3D9FF8;
+}
+.nav .nav-list a{
+    margin-right: 0;
+    color: #3D9FF8;
+}
+.nav .nav-list a i{
+    display: inline-block;
+    width: 8px;
+    height: 8px;
+    background: #F86F5C;
+    border-radius: 4px;
+    margin-right: 5%;
+}
+.btn-primary{
+    background: #3D9FF8;
+    border-color:#3D9FF8;
+}
+.btn-primary:active:hover{
+    background: #2b90ac;
+    border-color:#2b90ac;
+}
+.yc-title{
+    background: #F9F9F9;
+    border-bottom: 1px solid #dfdfe2;
+}
+.vip-top{
+    position: relative;
+}
+.vip-ico{
+    display: block;
+    position: absolute;
+    width: 25px;
+    height: 30px;
+    top: 50px;
+    left: 62px;
+}
+.yc-pm-title{
+    padding: 10px 0 0 10px;
+    color: #999;
+}
+.vip-mid{
+    margin-top: 14px;
+    color: #666;
+}
+.vip-bottom{
+    color: #999;
+}
+.yc-data-zan{
+    margin-right: 5px;
+    vertical-align: sub;
+}
+.table > thead > tr > th{
+    font-weight: 400;
+    border-bottom: none;
+}
+.table > tbody > tr > td{
+    padding: 0;
+    line-height: 3;
+    vertical-align: top;
+    border-top: 1px solid #dfdfe2;
+}
+tbody{
+    color: #999;
+}
+.yc-data-z{
+    padding-right: 10%;
+}
